@@ -1,0 +1,2982 @@
+cd
+vi .bashrc
+exit
+cd
+vi .bashrc
+exit
+apt-get install slaaaaaaaaaack 
+apt-get install slack
+apt-get install snmpb
+apt-get net-snmp
+apt-get install net-snmp
+apt-get install netsnmp
+apt install snmpd snmp libsnmp-dev
+apt install wireshark
+apt install tcpdump
+apt install tcpreplay
+apt-get install dolphin
+cd Downloads/
+ll
+apt install snmpb_0.8_i386.deb
+apt install ./snmpb_0.8_i386.deb
+tkmib
+apt install tkmib
+apt install kate
+tkmib 
+snmpwalk 
+apt-get cacti
+apt-get install cacti
+cacti
+netstat -tnap
+apt install net-tools
+netstat -tnap
+passwd
+passwd monitor
+pwd
+java -version
+ifconfig
+apt install ssh 
+ps -ef |grep 60505
+shutdown -r now
+apt update
+apt upgrade
+apt install ssh
+ifconfig -a
+java -version
+apt install openjdk-11-jre apt-transport-https wget nginx
+java -version
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add - 
+vi /etc/apt/sources.list.d/elastic.list
+echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" >  /etc/apt/sources.list.d/elastic.list
+cat /etc/apt/sources.list.d/elastic.list
+upt update
+apt update
+apt install elasticsearch kibana
+cd /etc/kibana
+ll
+vi kibana.yml 
+rm 1
+ll
+systemctl restart kibana
+systemctl status kibana
+systemctl start elasticsearch
+echo "monitor:`openssl passwd -apr1 2801mpe`" | sudo tee -a /etc/nginx/htpasswd.kibana
+vi /etc/nginx/sites-available/kibana
+nano /etc/nginx/sites-available/kibana
+cat /etc/nginx/sites-available/kibana
+nano /etc/nginx/sites-available/kibana
+cat /etc/nginx/sites-available/kibana
+rm /etc/nginx/sites-enabled/default
+ln -s /etc/nginx/sites-available/kibana /etc/nginx/sites-enabled/kibana
+systemctl restart nginx
+journalctl -xe
+nano /etc/nginx/sites-available/kibana
+systemctl restart nginx
+systemctl status nginx
+systemctl start nginx
+journalctl -xe
+netstat -tnap
+systemctl stop apache
+systemctl stop apache2
+systemctl disable apache2
+systemctl restart nginx
+systemctl status nginx
+apt install logstash
+systemctl status logstash
+find / |grep logstash
+find / |grep bin/logstash
+/usr/share/logstash/bin/logstash -e 'input { stdin { } } output { stdout {} }'
+ifconfig
+ufw status verbose
+ifconfig -a
+tcpdump -i ens33 -n udp port 514
+ifconfig -a 
+systemctl enable elasticsearch
+systemctl start elasticsearch
+systemctl enable logstash 
+systemctl start logstash 
+systemctl enable kibana
+systemctl start kibana
+systemctl status kibana
+systemctl status elasticsearch
+systemctl status logstash
+tcpdump -n udp 519
+tcpdump -n udp 514
+ll
+git clone https://github.com/PaloAltoNetworks/SafeNetworking.wiki.git
+apt install gitr
+apt install git
+git clone https://github.com/PaloAltoNetworks/SafeNetworking.wiki.git
+ll
+rm -rf SafeNetworking.wiki
+vi /etc/hosts
+apt install vim
+vi /etc/hosts
+add-apt-repository "deb http://archive.ubuntu.com/ubuntu $(lsb_release -sc) universe"
+apt-get update && sudo apt-get install -y software-properties-common curl 
+apt-get -y install build-essential python-dev python-setuptools libncursesw5-dev libgdbm-dev libc6-dev zlib1g-dev libsqlite3-dev libssl-dev openssl libffi-dev python3-pip 
+apt install python-venv
+apt install python3.8-venv
+java -version
+apt install apache2-utils
+apt install gnome-tweak-tool
+gnome-tweaks 
+vi /etc/nginx/sites-available/default
+cd /etc/nginx/sites-available
+ll
+mv default default.dist
+cat kibana
+ll
+ln -s kibana default 
+ll
+cd
+ll
+git clone https://www.github.com/PaloAltoNetworks/safe-networking.git
+ll
+cd safe-networking/
+cd install/
+ll
+vi setup.sh 
+systemctl restart nginx
+systemctl status nginx
+ll
+ll /etc/logstash
+cd /etc/logstash
+ll conf.d/
+ll
+rm 1
+rm -rf Public Templates Documents Music Pictures Videos 
+ll
+pwd
+history
+ll /root
+cd /root
+cd safe-networking/
+ll
+cd install/
+ll
+cd logstash/
+ll
+vi gtp.conf
+vi threat.conf 
+systemctl status logstash
+systemctl status elasticsearch
+ifconfig -a 
+ufw --status
+ufw status
+ifconfig -a 
+ll
+rm 1
+cd /root
+cd /root
+ll
+cd safe-networking/
+ll
+cd install 
+cd logstash/
+ll
+cat pipelines.yml 
+cd /etc/logstash
+ll
+vi pipelines.yml 
+cd conf.d
+ll
+ll ../pipelines.yml 
+cat ../pipelines.yml 
+vi gtp-5514.conf
+cat ../pipelines.yml 
+vi ../pipelines.yml 
+cat ../pipelines.yml 
+vi /etc/logstash/conf.d/traffic-5517.conf
+cat /etc/logstash/conf.d/gtp-5514.conf
+vi /etc/logstash/conf.d/traffic-5517.conf
+systemctl restart logstash
+systemctl status logstash
+cat /etc/logstash/conf.d/gtp-5514.conf
+cat /etc/logstash/conf.d/syslog-514.conf
+vi /etc/logstash/conf.d/syslog-514.conf
+vi ../pipelines.yml 
+vi /etc/logstash/conf.d/syslog-514.conf
+vi ../pipelines.yml 
+systemctl restart logstash
+systemctl status logstash
+vi ../pipelines.yml 
+cat /etc/logstash/conf.d/syslog-514.conf
+vi /etc/logstash/conf.d/syslog-514.conf
+ll
+vi traffic-5517.conf
+vi /etc/logstash/conf.d/gtp-5514.conf
+systemctl restart logstash
+ifconfig -a
+tcpdump -n udp -port 5517
+netstat -tnap
+cd /usr/share/bin
+cd /usr/share
+ll
+cd logstash/
+cd bin
+./logstash -e 'input { stdin { } } output { stdout {} }'
+cd /etc/logstash
+ll
+cat logstash.yml 
+grep -v '#' logstash.yml 
+ll
+vi pipelines.yml 
+systemctl restart logstash
+systemctl status logstash
+netstat -tnap
+systemctl disable cups
+systemctl stop cups
+systemctl stop mysql
+systemctl disable mysql
+ll
+cat pipelines.yml 
+cd conf.d/
+ll
+cat traffic-5517.conf 
+ll /var/log
+ll /var/log/logstash/
+tail -f  /var/log/logstash/logstash-plain.log
+vi  /var/log/logstash/logstash-plain.log
+pwd
+cd  /var/log/logstash
+ll
+systemctl stop logstash
+ll
+cat /dev/null > logstash-plain.log
+ll
+vi gtp.conf 
+tail -f logstash-plain.log 
+rm /etc/logstash/conf.d/syslog-514.conf 
+systemctl stop logstash
+ll
+cat /dev/null logstash-plain.log
+cat /dev/null > logstash-plain.log
+systemctl start logstash
+tail -f logstash-plain.log 
+netstat -tnap
+netstat -tnarp
+netstat -unap
+pwd
+cd /etc/logstash
+ll
+cd conf.d/
+ll
+vi traffic-5517.conf 
+vi gtp-5514.conf 
+systemctl restart logstash
+netstat -unap
+systemctl status logstash
+netstat -unap
+systemctl status logstash
+systemctl stop logstash
+systemctl status logstash
+/usr/share/logstash/bin/logstash 
+HALLO
+cat /etc/logstash/conf.d/gtp-5514.conf
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+pwd
+ll
+ll
+vi gtp-5514.conf
+systemctl status logstash
+history
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+vi gtp.conf 
+vi /etc/logstash/conf.d/gtp-5514.conf 
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+q!
+vi /etc/logstash/conf.d/gtp-5514.conf 
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+vi /etc/logstash/conf.d/gtp-5514.conf 
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+vi /etc/logstash/conf.d/gtp-5514.conf 
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+vi /etc/logstash/conf.d/gtp-5514.conf 
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+vi /etc/logstash/conf.d/gtp-5514.conf 
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+vi gtp.conf 
+vi /etc/logstash/conf.d/gtp-5514.conf 
+vietc/logstash/conf.d/gtp-5514.conf 
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+vi /etc/logstash/conf.d/gtp-5514.conf 
+curl -XDELETE localhost:9200/*
+history
+cd 
+cd safe-networking/
+cd install/
+cd logstash/
+ll
+vi gtp.conf 
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+vi gtp.conf 
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+vi gtp.conf 
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+pwd
+mkdir /etc/logstash/dictionary
+vi /etc/logstash/dictionary/mncmcc.txt
+scp /etc/logstash/dictionary/mncmcc.txt 192.168.1.q!
+vi /etc/logstash/dictionary/mncmcc.txt
+cat /dev/null > /etc/logstash/dictionary/mncmcc.txt
+vi /etc/logstash/dictionary/mncmcc.txt
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+mv /etc/logstash/dictionary/mncmcc.txt /etc/logstash/dictionary/mncmcc.csv
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+vi /etc/logstash/dictionary/mncmcc.csv
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+vi /etc/logstash/dictionary/mncmcc.csv
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+vi /etc/logstash/dictionary/mncmcc.csv
+vi /etc/logstash/dictionary/mncmcc.csv
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+vi /etc/logstash/dictionary/mncmcc.csv
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+vi /etc/logstash/dictionary/mncmcc.csv
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+mv /etc/logstash/dictionary/mncmcc.csv /etc/logstash/dictionary/mncmcc.yml
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-5514.conf 
+vi /etc/logstash/conf.d/gtp-5514.conf 
+whois 112.198.106.229
+apt install whois
+whois 112.198.106.229
+pwd
+pwd
+cd /etc/logstash
+ll
+cd dictionary/
+ll
+vi GRX-IPs.txt
+history |grep curl
+history |grep curl
+curl -XDELETE localhost:9200/*
+systemctl start logstash
+systemctl status logstash
+systemctl stop logstash
+curl -XDELETE localhost:9200/*
+vi /etc/logstash/conf.d/gtp-5514.conf 
+cd /etc/logstash/conf.d
+ll
+mv traffic-5517.conf .traffic-5517.hide
+mv  .traffic-5517.hide ../traffic-5517.hide
+ll ..
+ll 
+ll
+cd ..
+systemctl status elasticsearch
+systemctl status kibana
+systemctl start logstash
+netstat -unap
+systemctl status nginx
+systemctl stop kibana
+systemctl stop elasticsearch
+systemctl stop logstash
+cd /etc/logstash/dictionary/
+vi GRX-scan.sh
+chmod -x GRX-scan.sh 
+ll
+cd ..
+ll
+cd conf.d
+ll
+cp gtp-5514.conf  quickimport--file.conf
+pwd
+cd /var
+ll
+ll spool/
+ll local
+vi quickimport--file.conf 
+cat quickimport--file.conf 
+cd /home/monitor/
+ll
+mv threat--smartone.csv /var/local/
+cd /var/local
+ll
+chown root:root threat--smartone.csv 
+systemctl stop logstash
+history
+cd /etc/logstash/
+ll
+cd conf.d/
+ll
+/usr/share/logstash/bin/logstash -f /etc/logstash/quickimport--file.conf
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/quickimport--file.conf
+cd /etc/logstash/conf.d/
+ll
+vi quickimport--file.conf
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/quickimport--file.conf
+vi quickimport--file.conf
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/quickimport--file.conf
+ll
+vi gtp-5514.conf
+ll /var/local/
+cat quickimport--file.conf
+ll /var/local/
+df -h
+cp /media/monitor/F2E9-4D67/threat--smartone.csv /var/local
+vi /var/local/threat--smartone.csv 
+systemctl stop logstash
+curl -XDELETE localhost:9200/*
+history
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/quickimport--file.conf
+df
+umount /media/monitor/F2E9-4D67
+df
+cp /media/monitor/F2E9-4D67/threat--smartone.csv $HOME
+cp $HOME/threat--smartone.csv /var/local
+ll
+vi quickimport--file.conf
+vi /var/local/threat--smartone.csv 
+curl -XDELETE localhost:9200/*
+systemctl restart kibana
+systemctl restart elasticsearch
+ll /var/local
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/quickimport--file.conf
+history 
+curl -XDELETE localhost:9200/*
+systemctl stop logstash
+cd /var/local/
+ll
+vi threat--smartone.csv
+cd /etc/logstash/conf.d
+ll
+vi quickimport--file.conf 
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/quickimport--file.conf
+df
+cd /media/monitor/F2E9-4D67
+ll
+vi threat--smartone.csv
+cp threat--smartone.csv /var/local
+ll /var/local
+cd /
+history
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/quickimport--file.conf
+cd /var/local
+ll
+vi threat--smartone.csv 
+vi /etc/logstash/conf.d/quickimport--file.conf 
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/quickimport--file.conf
+ll
+vi threat--smartone.csv
+file -k threat--smartone.csv
+vi /etc/logstash/conf.d/quickimport--file.conf 
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/quickimport--file.conf
+/usr/share/logstash/bin/logstash --log.level debug -f /etc/logstash/conf.d/quickimport--file.conf
+vi /etc/logstash/conf.d/quickimport--file.conf 
+/usr/share/logstash/bin/logstash --log.level debug -f /etc/logstash/conf.d/quickimport--file.conf
+ll /usr/share/logstash/data/plugins/inputs/file/.sincedb_70b60872e1abbb13de65fe6b3e0076f0
+ll /usr/share/logstash/data/plugins/inputs/file/
+mv /usr/share/logstash/data/plugins/inputs/file/.sincedb_70b60872e1abbb13de65fe6b3e0076f0  /root/.sincedb_70b60872e1abbb13de65fe6b3e0076f0
+/usr/share/logstash/bin/logstash --log.level debug -f /etc/logstash/conf.d/quickimport--file.conf
+ll /usr/share/logstash/data/plugins/inputs/file/
+rm /usr/share/logstash/data/plugins/inputs/file/.sincedb_70b60872e1abbb13de65fe6b3e0076f0
+vi /etc/logstash/conf.d/quickimport--file.conf 
+/usr/share/logstash/bin/logstash --log.level debug -f /etc/logstash/conf.d/quickimport--file.conf
+/usr/share/logstash/bin/logstash  -f /etc/logstash/conf.d/quickimport--file.conf
+vi /etc/logstash/conf.d/quickimport--file.conf 
+curl -XDELETE localhost:9200/*
+/usr/share/logstash/bin/logstash  -f /etc/logstash/conf.d/quickimport--file.conf
+curl -XDELETE localhost:9200/*
+ll /usr/share/logstash/data/plugins/inputs/file/
+rm /usr/share/logstash/data/plugins/inputs/file/.sincedb_70b60872e1abbb13de65fe6b3e0076f0
+ll /usr/share/logstash/data/plugins/inputs/file/
+curl -XDELETE localhost:9200/*
+/usr/share/logstash/bin/logstash  -f /etc/logstash/conf.d/quickimport--file.conf
+ll /usr/share/logstash/data/plugins/inputs/file/
+rm /usr/share/logstash/data/plugins/inputs/file/.sincedb_70b60872e1abbb13de65fe6b3e0076f0
+pwd
+ll
+ll /root
+rm /root/.sincedb_70b60872e1abbb13de65fe6b3e0076f0
+vi /root/threat--smartone.csv 
+cp /root/threat--smartone.csv .
+ll /etc/logstash/conf.d/
+vi /etc/logstash/conf.d/quickimport--file.conf 
+systemctl stop elasticsearch
+systemctl stop kibana
+systemctl start kibana
+systemctl start elasticsearch
+systemctl start logstash
+systemctl status elasticsearch
+curl -XDELETE localhost:9200/*
+systemctl restart elasticsearch
+systemctl status elasticsearch
+systemctl stop elasticsearch
+systemctl status elasticsearch
+cd /var/lib
+ll
+cd elasticsearch/
+ll
+cd nodes
+ll
+cd 0
+ll
+cd ..
+ll
+mv 0 _____0.sav
+ll
+df
+ll /media/monitor/USBDISK
+cp /media/monitor/USBDISK/_var_lib_elasticsearch_nodes__0.tar .
+ll
+tar xvf _var_lib_elasticsearch_nodes__0.tar 
+ll
+mv _0 0
+ll
+systemctl start elasticsearch
+systemctl status elasticsearch
+chmod -R elasticsearch:elasticsearch 0
+chown -R elasticsearch:elasticsearch 0
+ll
+/usr/share/elasticsearch/bin/elasticsearch 
+systemctl start elasticsearch
+systemctl status elasticsearch
+cd /var/log/elasticsearch/
+vi elasticsearch.log 
+cd /var/lib/elasticsearch/
+ll
+cd nodes
+ll
+cd 0
+kk
+ll
+cat node.lock 
+rm node.lock 
+cd _state/
+ll
+file *
+vi manifest-14.st
+ll
+cd ../..
+ll
+rm -rf 0
+mv _____0.sav 0
+systemctl restart elasticsearch
+systemctl status elasticsearch
+ll
+systemctl stop elasticsearch
+systemctl status elasticsearch
+ll
+cp -rpf 0 ___0.sav
+ll
+ll ___0.sav/
+du -sh .
+cd ..
+ll
+cd nodes
+ll
+tar -xvf _var_lib_elasticsearch_nodes__0.tar
+sftp 192.168.1.3
+ll
+mv mbrowse-0.4.3.tar /usr/share
+cat /etc/os-release 
+apt-get install net-snmp
+snap install net-snmp
+snap install net-snmp-tools
+snap install net-snmp-dev
+snap install net-snmp-devel
+snap remove net-snmp
+apt install snmpd snmp libsnmp-dev 
+apt install snmp-tools
+ll /usr/share
+cd /usr/share/mbrowse-0.4.3.tar 
+tar xvf  /usr/share/mbrowse-0.4.3.tar 
+cd /usr/share/
+ll *.tar
+rm mbrowse-0.4.3.tar
+ll
+ll -lart
+find / |grep mbrowse
+sftp 192.168.1.3
+gunzip mbrowse-0.4.3.tar 
+tar xvf mbrowse-0.4.3.tar 
+cd mbrowse-0.4.3
+./configure 
+dpkg -L snmp-lib
+dpkg -L libsnmp-dev
+./configure 
+./configure --with-snmp-lib=/usr/include
+./configure --with-snmp-lib=/usr/include/net-snmp
+dpkg -L libsnmp
+apt install libsnmp
+./configure --with-snmp-lib=/usr/lib/x86_64-linux-gnu/
+vi config.log
+tkmib
+snmpwalk -v 2c -c public 192.168.1.6 .1.3.6.1.4.1.25461.2.1.2.1.19.8
+cd /var/
+find . |grep mib
+cd lib/snmp/
+ll
+ll mib_indexes/
+ll /usr/share/lib/dpkg/info/tkmib.list
+ll /usr/lib/dpkg/info/tkmib.list
+ll /var/lib/dpkg/info/tkmib.list
+cat /var/lib/dpkg/info/tkmib.list
+apt install snmp-mibs-downloader
+snmpwalk -v 2c -c ifitsdictionarywordsmakeitsuperlong9812 192.168.1.6 .1.3.6.1.4.1.25461.2.1.2.1.19.8
+ping 192.168.1.6
+snmpwalk -v 2c -c ifitsdictionarywordsmakeitsuperlong9812 192.168.1.6 
+snmpwalk -v 2c -c public 192.168.1.6 .1.3.6.1.4.1.25461.2.1.2.1.19.8
+snmpwalk -v 2c -c public 192.168.1.6 
+snmpwalk -v 2c -c ifitsdictionarywordsmakeitsuperlong9812 192.168.1.6 .1.3.6.1.4.1.25461.2.1.2.1.19.8
+tkmib
+apt remove wireshark 
+apt-get install wireshark 
+chgrp wireshark /usr/bin/dumpcap
+chmod o-rx /usr/bin/dumpcap
+vi /etc/group
+$ sudo dpkq-reconfigure wireshark-common
+exit
+sudo dpkq-reconfigure wireshark-common
+dpkq-reconfigure wireshark-common
+apt install debconf
+apt upgrade
+apt install debconf
+dpkq reconfigure wireshark-common
+apt reconfigure wireshark-common
+apt configure wireshark-common
+apt remove wireshark
+add-apt-repository ppa:wireshark-dev/stable
+apt remove wireshark
+du -sh .
+du -h -l 1  .
+cd lib
+ll
+cd elasticsearch/
+ll
+cd nodes
+ll
+rm _*
+ll
+rm -r _0
+rm -r ___0.sav
+ll
+ll 0
+systemctl status elasticsearch 
+ll /etc/elasticsearch
+ll /etc/logstash
+cd /etc/logstash
+ll
+vi traffic-5517.hide
+cd dictionary/
+ll
+vi GRX-IPs.txt
+vi mncmcc.yml
+cd ..
+ll
+vi logstash.yml 
+cd conf.d
+ll
+cat gtp-5514.conf 
+apt-get install tshark
+vmware-toolbox
+apt install open-vm-tools
+ll
+cd ..
+ll
+cat traffic-5517.hide 
+du -sh --deepth=1
+du -sh --deep=1
+du -sh --deepth 1
+man du
+du -sh -d 1
+du -h -d 1
+cd /var
+du -h -d 1
+cd log
+ll
+du -sh
+du -h -d 1
+cd elasticsearch
+ll
+rm *.gz
+ll
+cd ..
+du -h -d 1
+cd elasticsearch
+ll
+fuser -cu gc.log.10
+ps -ef |grep 17995
+ps -ef |grep 2279
+ll
+fuser -cu gc.log.00
+ll
+cd ..
+ll
+du -h -d 1
+cd journal
+ll
+cd 0dd8f8bd38a2408c8e483672ec20a946
+ll
+journalctl --rotate
+ll
+journalctl --vacuum-files=1
+ll
+cd ..
+du -h -d 1
+cd ..
+du -h -d 1
+cd lib
+ll
+du -h -d 1
+cd snapd
+ll
+du -h -d 1
+cd snaps
+ll
+cd /
+git
+du -h -d 1
+cd /home
+ll
+cd monitor/
+ll
+ll Downloads/
+rm Downloads/*
+ll Desktop/
+du -h -d 1
+vmware-toolbox
+vmware-toolbox-cmd
+vmware-toolbox-cmd help
+vmware-toolbox-cmd disk help
+vmware-toolbox-cmd help disk
+vmware-toolbox-cmd disk shrinkonly
+ll
+pwd
+git clone https://github.com/madelinemccombe/gtp_elk.git
+ll
+rm -r gtp_elk/
+git clone https://github.com/madelinemccombe/gtp_elk.git
+tcpdump -p udp 
+df -h
+df 
+cd /mnt/hgfs
+ll
+cd PA-DOC/
+ll
+mv /home/monitor/gtp-log.pcap .
+pwd
+exit
+find / |grep mib
+find / |grep snmpb
+apt install tkmib
+tkmib 
+cd /usr/share/application
+cd /usr/share/applications
+ll
+cat wireshark.desktop 
+vi tkmib.desktop
+ll
+rm -rf mbrowse-0.4.3/
+ll
+cd gtp_elk/
+ll
+vi README.md 
+cd .git
+ll
+cat description 
+cd ..
+git pull
+ll
+cd ..
+sar 
+apt install sysstat
+sar
+ll
+git clone https://github.com/pennersm/minor-Bashing
+ll
+cd minor-Bashing/
+ll
+chmod +x watch_performance 
+./watch_performance 
+./watch_performance --show-what
+vi watch_performance 
+apt list --installed
+cat watch_performance |grep rpm
+apt list --installed|grep "sysstat"
+echo $?
+( apt list --installed|grep "sysstat" &>/dev/null ) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+( apt list --installed|grep "sysstat" &>/dev/null 2>/dev/null ) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+( apt list --installed|grep "sysstat" &>/dev/null &2>/dev/null ) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+( apt list --installed|grep "sysstat" &>/dev/null &3>/dev/null ) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+( apt list --installed|grep "sysstat" &>/dev/null &1>/dev/null ) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+( apt -s list --installed|grep "sysstat" &>/dev/null ) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+( apt list -s --installed|grep "sysstat" &>/dev/null ) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+( apt list --installed|grep "sysstat" 2>/dev/null ) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+( apt -q list --installed|grep "sysstat" &>/dev/null ) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+( apt -q list --installed|grep "sysstat" &>/dev/null 2>/dev/null ) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+( apt-get -q list --installed|grep "sysstat" &>/dev/null 2>/dev/null ) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+( apt list --installed|grep "sysstat" &2>/dev/null ) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+( apt list --installed|grep "sysstat" &>/dev/null ) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+( dpkg list --installed|grep "sysstat" &>/dev/null ) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+( apt list --installed|grep "sysstat" &>/dev/null ) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+( apt list --installed|grep "sysstat" &>/dev/null 2>&1 ) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+( apt list --installed|grep "sysstat" &>/dev/null 2>& ) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+( apt list --installed|grep "sysstat" 2&>/dev/null 1>&2) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+dpkg-query -l
+dpkg-query -l|grep sysstat
+( dpkg-query -l|grep "sysstat" &>/dev/null) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+echo $$
+( dpkg-query -l|grep "sysstat" &>/dev/null) || ( logger -p user.error -t ${TAG} "systat package not installed - exiting";)
+echo $?
+ll
+vi watch_performance 
+./watch_performance --show-what
+./watch_performance 
+./watch_performance -show-what
+ps -ef |grep watch
+./watch_performance --show-what
+./watch_performance --start-observ
+vi watch_performance 
+./watch_performance --start-observ
+echo $?
+vi ./watch_performance 
+mkdir /home/monitor/watch_perf
+cd /home/monitor/watch_perf
+cd ..
+ll
+chmod 755 watch_perf
+ll
+chown monitor:monitor watch_perf
+ll
+vi /etc/group
+chmod 775 watch_perf
+./watch_performance 
+cd minor-Bashing/
+./watch_performance 
+./watch_performance --show-what
+./watch_performance --start-observ
+kill %1
+vi ./watch_performance
+cd /etc/netplan
+ll
+vi 01-network-manager-all.yaml 
+ifconfig -a
+cd ..
+ll
+vi cloud
+cd cloud
+cd netplan/01-network-manager-all.yaml 
+cd netplan/
+vi ne
+ll
+vi 01-network-manager-all.yaml 
+cd /etc/
+cd apt/sources.list
+cd apt
+ll
+cd sources.list
+cat sources.list
+ll
+cd sources.list.d
+ll
+sudo su
+cd /etc/elasticsearch
+ll
+vi jvm.options 
+ll
+pwd
+cd /etc/logstash
+cd conf.d/
+ll
+cat gtp-5514.conf
+cd /etc/
+find / |grep filebeat
+cd logstash/
+ll
+cd conf.d/
+ll
+cat gtp-5514.conf 
+pwd
+cd ..
+ll
+cat -v 
+grep -v "#" jvm.options
+cd ../elasticsearch
+ll
+grep -v "#" jvm.options
+ll
+grep -v "#" elasticsearch.yml
+grep -v "#" elasticsearch.keystore 
+grep -v "#" log4j2.properties
+cd ../logstash
+ll
+grep -v "#" log4j2.properties
+ll /mnt/hgfs/
+ll /mnt/hgfs/*
+ll /mnt/hgfs/*|grep txt
+mv conf--home.txt /mnt/hgfs/PA-DOC/conf-java-elk.txt
+cd conf.d/
+ll
+apt install ethtool
+apt update
+apt upgrade
+cd
+ll
+cd snap 
+ll
+which snmpwalk
+ll /usr/bin/snmpwalk
+cd ..
+rm -r snap/
+cd /home/monitor
+ll
+cd gtp_elk/
+ll
+git update .
+git --help
+git pull
+ll
+cat README.md 
+python3 -m venv env
+source env/bin/activate
+cd
+cd /home/monitor
+ll
+ls -la
+cd gtp_elk/
+vi test_elk_connection.py
+vi ELK_GTP_processing.py
+tar cvf ../elk-gtp-01042021.tar .
+ll
+cd ..
+ll
+gzip elk-gtp-01042021.tar
+ll
+ll -h
+df
+mv elk-gtp-01042021.tar.gz /mnt/hgfs/PA-DOC/
+ll /mnt/hgfs/PA-DOC/
+pip freeze > requirements.txt
+vi requirements.txt 
+pip freeze
+vi requirements.txt 
+pwd
+vi requirements.txt 
+ll
+cd gtp_elk/
+ll
+cat README.md 
+vi missing.libs.txt
+mkdir MISSING-libs
+pip download -r missing.libs.txt -d MISSING-libs/
+pip download virtualenv -d MISSING-libs/
+ll
+cd MISSING-libs/
+ll
+cd ..
+tar -xvf MISSING-libs/
+tar -cvf missing-libs.tar MISSING-libs/
+ll
+gzip -9 missing-libs.tar 
+mv missing-libs.tar.gz /mnt/hgfs/PA-DOC/
+ll
+vi missing.libs.txt 
+rm missing.libs.txt MISSING-libs/*
+pip download virtualenv -d MISSING-libs/
+cd MISSING-libs/
+ll
+cd /etc/logstash
+ll
+cd conf.d/
+ll
+cat gtp-5514.conf 
+ll
+cd ..
+ll
+cd
+ll
+cd safe-networking/
+ll
+cd log/
+ll
+cd ..
+ll
+cd install/
+ll
+cd logstash/
+ll
+cat pipelines.yml 
+cd config/
+ll
+cd ..
+ll
+vi gtp.conf 
+vi threat.conf 
+ll
+cat threat.conf 
+vi gtp.conf 
+cat threat.conf 
+vi threat.conf 
+pwd
+ifconfig 
+pwd
+cd /etc/logstash
+ll
+cd conf.d/
+ll
+vi gtp-5514.conf 
+tcpdump -p udp port 5517
+tcpdump -p udp port 5518
+ufw status
+exit
+ifconfig -a
+iptables status
+iptables --LIST
+iptables --list
+iptables --list -n -v
+iptables stop
+systemctl iptables stop
+systemctl stop iptables
+systemctl status iptables
+service iptables status
+ufw start
+ufw enable
+iptables status
+iptables --list
+ufw allow 5518 udp
+ufw allow udp:5518
+ufw allow udp 5518
+ufw allow 5518:udp
+ufw allow 5518/udp
+ufw status
+tcpdump -p udp port 5518
+systemctl restart kibana
+systemctl restart logstash
+systemctl restart elasticsearch
+systemctl restart kibana
+ufw status
+cd /etc/logstash
+ll
+cd conf.d
+ll
+mv gtp-5514.conf gtp-5514.___hide___conf
+ll
+cat quickimport--file.conf 
+ll
+mv quickimport--file.conf quickimport--file.___hide___conf 
+vi gtp-combi.conf
+systemctl restart logstash 
+systemctl stop logstash 
+history
+ll
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf 
+/usr/share/logstash/bin/logstash --config.test_and_exit -f /etc/logstash/conf.d/gtp-combi.conf 
+ll
+cat gtp-combi.conf
+ll
+cat gtp-5514.___hide___conf
+/usr/share/logstash/bin/logstash --config.test_and_exit -f /etc/logstash/conf.d/gtp-combi.conf 
+ll
+cat gtp-combi.conf 
+/usr/share/logstash/bin/logstash --config.test_and_exit -f /etc/logstash/conf.d/gtp-combi.conf 
+cat gtp-5514.___hide___conf
+/usr/share/logstash/bin/logstash --config.test_and_exit -f /etc/logstash/conf.d/gtp-combi.conf 
+/usr/share/logstash/bin/logstash-plugin install logstash-bytes
+/usr/share/logstash/bin/logstash-plugin install bytes
+/usr/share/logstash/bin/logstash -h
+/usr/share/logstash/bin/logstash --help
+/usr/share/logstash/bin/logstash --version
+apt-get update
+apt-get upgrade
+/usr/share/logstash/bin/logstash --version
+apt-mark showhold
+echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | tee -a /etc/apt/sources.list.d/elastic-7.x.list
+cd /etc/apt/sources.list.d
+ll
+java --version
+shutdown -r now
+ufw status
+apt-get update
+cp /etc/elasticsearch/jvm.options /etc/elasticsearch/jvm.options.older
+cp /etc/kibana/kibana.yml /etc/kibana/kibana.yml.older
+apt-get upgrade
+history 
+/usr/share/logstash/bin/logstash --config.test_and_exit -f /etc/logstash/conf.d/gtp-combi.conf 
+/usr/share/logstash/bin/logstash-plugin install bytes
+/usr/share/logstash/bin/logstash-plugin install logstash-filter-bytes
+/usr/share/logstash/bin/logstash --config.test_and_exit -f /etc/logstash/conf.d/gtp-combi.conf 
+whoami
+cd /etc/logstash
+ll
+cd conf.d/
+ll
+/usr/share/logstash/bin/logstash --config.test_and_exit -f /etc/logstash/conf.d/gtp-combi.conf 
+vi gtp-combi.conf 
+history |grep curl
+history |grep curl
+curl -XDELETE localhost:9200/*
+systemctl restart logstash 
+systemctl restart elasticsearch
+systemctl restart kibana
+history
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf
+systemctl stop logstash
+history |grep tcpdu
+history |grep tcpdu
+ufsw status
+ufw status
+tcpdump -p udp port 5518
+vi gtp-combi.conf 
+pwd
+ll
+ssh penners@192.168.1.5
+ssh penners@192.168.1.3
+sftp penners@192.168.1.3
+sftp root@192.168.1.3
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf
+cd /etc/logstash
+ll
+cd conf.d/
+ll
+cp gtp-combi.conf gtp-combi.conf--allcombined-syntaxonly
+ruby
+apt install ruby
+vi gtp-combi.conf
+history 
+/usr/share/logstash/bin/logstash --config.test_and_exit -f /etc/logstash/conf.d/gtp-combi.conf 
+vi gtp-combi.conf
+/usr/share/logstash/bin/logstash --config.test_and_exit -f /etc/logstash/conf.d/gtp-combi.conf 
+ll
+history
+history|grep tcpdu
+history|grep tcpdu
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf
+systemctl restart elasticsearch 
+cd /etc/logstash/conf.d/
+ll
+systemctl status logstash
+systemctl status elasticsearch
+systemctl status logstash
+ufw status
+cd /etc/elasticsearch/
+ll
+cp jvm.options jvm.options.dist-upgrade
+mv jvm.options.older jvm.options
+cd /etc/logstash/
+ll
+cp logstash.yml logstash.yml-dist-upgrade
+mv logstash.yml.dpkg-old logstash.yml
+cd /etc/kibana/
+ll
+cp kibana.yml kibana.yml.dist-upgrade
+mv kibana.yml.dpkg-old kibana.yml
+ll
+shutdown -r now
+systemctl status logstash
+ufw status
+history |grep tcpd
+history |grep tcpd
+cd /etc/logstash
+ll
+cd conf.d/
+ll
+systemctl stop logstash 
+vi gtp-combi.conf
+history
+/usr/share/logstash/bin/logstash 
+ll
+cd ..
+ll
+cat logstash.yml
+ll
+ll pipelines.yml 
+vi pipelines.yml 
+cd conf.d
+ll
+mkdir oldconf
+mv quickimport--file.___hide___conf gtp-5514.___hide___conf gtp-combi.conf--allcombined-syntaxonly  oldconf 
+ll
+mv oldconf ..
+ll
+history
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf
+ll
+vi gtp-combi.conf 
+tcpdump -p udp port 5518
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf
+vi gtp-combi.conf 
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf
+tcpdump -p udp port 5518
+sudo su
+history 
+cd /etc/logstash
+cd conf.d
+ll
+vi /etc/logstash/conf.d/gtp-combi.conf
+history
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf
+vi gtp-combi.conf 
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf
+ll
+cd conf.d
+ll
+vi gtp-combi.conf 
+q!
+cd /home/monitor
+ll
+cd gtp_elk
+ll
+./test_elk_connection.py
+chmod a+x *
+./test_elk_connection.py
+pip install eland
+ll
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf
+vi gtp-combi.conf 
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf
+ll
+cd /etc/logstash
+ll
+cd conf.d
+ll
+cp gtp-combi.conf gtp-combi.conf--wrong-branch
+history
+/usr/share/logstash/bin/logstash --config.test_and_exit -f /etc/logstash/conf.d/gtp-combi.conf 
+systemctl restart elasticsearch
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf 
+systemctl status elasticsearch
+systemctl start elasticsearch
+systemctl status elasticsearch
+cd /etc/logstash
+ll
+cd conf.d
+ll
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf 
+mv gtp-combi.conf gtp-combi.conf--newbranch
+ll
+cp gtp-combi.conf--wrong-branch gtp-combi.conf
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf 
+ll
+cd ..
+ll
+ll oldconf
+vi gtp-combi.conf--allcombined-syntaxonly
+cd oldconf/
+vi gtp-combi.conf--allcombined-syntaxonly
+cd ..
+cd conf.d
+history
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf 
+systemctl start logstash
+systemctl status logstash
+systemctl stop logstash
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf 
+vi gtp-combi.conf
+ll
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf 
+vi gtp-combi.conf
+/usr/share/logstash/bin/logstash -f /etc/logstash/conf.d/gtp-combi.conf 
+history -curl 
+history |grep curl
+history |grep curl
+curl -XDELETE localhost:9200/*
+systemctl restart elasticsearch 
+systemctl restart kibana
+systemctl start logstash
+systemctl status logstash
+cd /var/log/kibana
+ll
+vi kibana.log 
+cd /etc/logstash
+cd oldconf/
+ll
+cat gtp-5514.___hide___conf
+systemctl restart logstash
+systemctl status logstash
+ll
+cd ../conf.d
+ll
+sftp root@192.168.1.3
+ll
+cd ..
+ll
+cd 
+ll
+cd /home/monitor/
+ll
+cd gtp_elk/
+ll
+vi ELK_GTP_processing.py 
+systemctl restart kibana
+vi ELK_GTP_processing.py 
+cd 
+curl -X PUT localhost:9200/packets--Starhub-test01
+curl -X PUT localhost:9200/packets__Starhub_test01
+curl -X PUT localhost:9200/packets_Starhub_test01
+curl -X PUT localhost:9200/packets
+df
+sftp root@192.168.1.3
+ll
+vi es-map.json
+curl "localhost:9200/packets/_bulk" --data-binary "@es-map.json"
+curl "localhost:9200/packets/_mapping?pretty"  -H 'Content-Type: application/json' --data-binary "@es-map.json" 
+sftp root@192.168.1.3
+ll
+curl -H "Content-Type: application/x-ndjson" -XPOST "localhost:9200/packets/_bulk" --data-binary "@GTP-CP3233-UP--7thr.imeichange.json" 
+echo $?
+curl -H "Content-Type: application/x-ndjson" -XPOST "localhost:9200/packets/_bulk" --data-binary "@GTP-CP3233-UP--7thr.imeichange.json" 
+ll
+vi es-map.json 
+cp es-map.json es-map.json.orig
+vi es-map.json
+curl "localhost:9200/packets/_mapping?pretty"  -H 'Content-Type: application/json' --data-binary "@es-map.json" 
+ls
+curl "localhost:9200/packets/_mapping?pretty"  -H 'Content-Type: application/json' --data-binary "@es-map.jso" 
+curl "localhost:9200/packets/_mapping?pretty"  -H 'Content-Type: application/json' --data-binary "@es-map.json" 
+curl "localhost:9200/packets-/_bulk" --data-binary "@es-map.json"
+systemctl restart elasticsearch
+history
+systemctl restart kibana
+pwd
+ll
+cd /home/monitor
+ll
+cd gtp_elk
+ll
+vi ELK_GTP_processing.py
+cd /etc/logstash
+cd conf.d/
+ll
+vi gtp-combi.conf
+cd 
+ll
+cd /home/monitor/
+ll
+vi gtp_elk
+cd gtp_elk/
+ll
+vi ELK_GTP_processing.py 
+pip freeze
+apt install pip
+pip freeze
+python -m pip freeze
+python -l pip freeze
+python -m pip freeze
+pip install pip
+cd /usr/lib/python3/dist-packages
+ll
+apt install eland
+ll |grep eland
+cd pkg_resources
+ll
+cd ..
+cd
+ll
+mkdir PACKAGES--TELSEL
+sftp 192.168.1.3
+ll
+mv reqs--ubuntu18.04.txt PACKAGES--TELSEL/
+cd PACKAGES--TELSEL/
+ll
+pip download -r reqs--ubuntu18.04.txt -d .
+pip3 download -r reqs--ubuntu18.04.txt -d .
+vi reqs--ubuntu18.04.txt 
+pip download -r reqs--ubuntu18.04.txt -d .
+vi reqs--ubuntu18.04.txt 
+pip download -r reqs--ubuntu18.04.txt -d .
+vi reqs--ubuntu18.04.txt 
+pip download -r reqs--ubuntu18.04.txt -d .
+vi reqs--ubuntu18.04.txt 
+pip download -r reqs--ubuntu18.04.txt -d .
+vi reqs--ubuntu18.04.txt 
+pip download -r reqs--ubuntu18.04.txt -d .
+vi reqs--ubuntu18.04.txt 
+pip download -r reqs--ubuntu18.04.txt -d .
+vi reqs--ubuntu18.04.txt 
+pip download -r reqs--ubuntu18.04.txt -d .
+vi reqs--ubuntu18.04.txt 
+pip download -r reqs--ubuntu18.04.txt -d .
+vi reqs--ubuntu18.04.txt 
+pip download -r reqs--ubuntu18.04.txt -d .
+vi reqs--ubuntu18.04.txt 
+pip download -r reqs--ubuntu18.04.txt -d .
+vi reqs--ubuntu18.04.txt 
+pip download -r reqs--ubuntu18.04.txt -d .
+vi reqs--ubuntu18.04.txt 
+pip download -r reqs--ubuntu18.04.txt -d .
+vi reqs--ubuntu18.04.txt 
+pip download -r reqs--ubuntu18.04.txt -d .
+ll
+rm 1
+cd ..
+tar -cvf pythpacks.tar PACKAGES--TELSEL
+ll
+gzip -9 pythpacks.tar
+ll -h
+sftp 192.168.1.3
+ll
+rm -r PACKAGES--TELSEL pythpacks.tar.gz 
+cd /home/monitor
+ll
+cd gtp_elk/
+ll
+cd conf.d/
+ll
+cd ../oldconf/
+;;
+ll
+cat gtp-5514.___hide___conf
+history
+/usr/share/logstash/bin/logstash-plugin -h
+/usr/share/logstash/bin/logstash-plugin list
+/usr/share/logstash/bin/logstash-plugin prepare-offline-pack --output /home/monitor/bytes-plugin logstash-filter-bytes
+/usr/share/logstash/bin/logstash-plugin prepare-offline-pack --output /home/monitor/bytes-plugin.zip logstash-filter-bytes
+ping rubygems.org
+ping www.rubygems.org
+ping www.cisco.com
+cat /etc/resolv.conf
+vi /etc/resolv.conf
+ping www.cisco.com
+resolvectl -h
+resolvectl dns 208.67.222.222
+ip link show
+ip addr show
+ifconfig ens33 up 
+ip addr show
+ifconfig ens33 192.168.1.177 netmask 255.255.255.0 up
+ip addr show
+ping 8.8.8.8
+netstat -rn 
+route add default gw 192.168.1.1
+netstat -rn 
+ping 8.8.8.8
+/usr/share/logstash/bin/logstash-plugin prepare-offline-pack --output /home/monitor/bytes-plugin.zip logstash-filter-bytes
+ll /home/monitor/bytes-plugin.zip
+cd /home/monitor
+ll
+unzip bytes-plugin.zip 
+rm -r logstash/
+ll
+sftp root@192.168.1.3
+/usr/share/logstash/bin/logstash --version
+pwd
+ll
+unzip bytes-plugin.zip 
+cd logstash/
+ll
+vi logstash-filter-bytes-1.0.3.gem 
+history
+/usr/share/logstash/bin/logstash-plugin list
+/usr/share/logstash/bin/logstash-plugin remove logstash-filter-bytes
+/usr/share/logstash/bin/logstash-plugin install --version v1.0.2 logstash-filter-bytes
+/usr/share/logstash/bin/logstash-plugin install --version 1.0.2 logstash-filter-bytes
+history
+/usr/share/logstash/bin/logstash-plugin list
+history
+/usr/share/logstash/bin/logstash-plugin prepare-offline-pack --output /home/monitor/bytes-plugin-1.0.2.zip logstash-filter-bytes
+sftp root@192.168.1.3
+ll
+cd /etc/logstash
+ll
+cd oldconf
+ll
+cat gtp-5514.___hide___conf
+q!
+ll
+cd
+ll
+cd safe-networking/
+ll
+cd install/
+ll
+cd logstash
+ll
+vi gtp.conf 
+cd /etc/logstash
+ll
+cd conf.d
+ll
+df -h
+sftp root@192.168.1.3
+ll
+cp es-maping--GtpIcmpIpUdp ..
+cd ..
+ll
+mv oldconf/ conf.old
+cd conf.d
+ll
+mv gtp-combi.conf--wrong-branch gtp-combi.conf--newbranch ../conf.old
+ll
+rm es-maping--GtpIcmpIpUdp 
+cd ..
+ll
+mv es-maping--GtpIcmpIpUdp es-maping--GtpIcmpIpUdp.json
+more es-maping--GtpIcmpIpUdp.json 
+cd
+ll
+cd /etc/logstash
+ll
+pwd
+vi es-maping--GtpIcmpIpUdp.json
+vim es-maping--GtpIcmpIpUdp.json
+cp es-maping--GtpIcmpIpUdp.json /home/monitor/  && chown monitor:monitor /home/monitor/es-maping--GtpIcmpIpUdp.json
+vi es-maping--GtpIcmpIpUdp.json 
+cd conf.d
+ll
+cp gtp-combi.conf pcap-file.conf
+vi pcap-file.conf 
+ll
+mv gtp-combi.conf gtp-combi__hideconf 
+ll
+systemctl status logstash
+!
+cd /home/monitor
+mkdir pcaps
+cd pcaps/
+ll
+systemctl stop logstash
+sftp root@192.168.1.3
+ll
+ll
+ll /home/monitor/
+ll /home/monitor/pcaps/
+tshark -r E40-GTP-C_00002_20200604144557.pcap -T ek > E40-GTP-C_00002_20200604144557.json
+ll
+ll /home/monitor/pcaps/
+ll -h /home/monitor/pcaps/
+ll
+vi pcap-file.conf
+systemctl start logstash
+systemctl status logstash
+ll
+cd /etc/logstash
+ll
+cd /var/log/logstash/
+ll
+ll -lasrt
+tail -f logstash-plain.log
+vi /etc/logstash/conf.d/pcap-file.conf 
+tail -f logstash-plain.log
+systemctl stop logstash
+ll
+cat /etc/logstash/conf.d/gtp-combi__hideconf
+vi /etc/logstash/conf.d/pcap-file.conf 
+systemctl restart logstash
+tail -f logstash-plain.log
+systemctl restart logstash
+tail -f logstash-plain.log
+systemctl stop logstash
+systemctl start logstash
+tail -f logstash-plain.log
+systemctl stop logstash
+ll
+systemctl restart logstash
+pwd
+tail -f logstash-plain.log
+systemctl restart elasticsearch
+tail -f logstash-plain.log
+systemctl restart logstash
+tail -f logstash-plain.log
+systemctl stop logstash
+systemctl restart elasticsearch
+systemctl restart kibana
+systemctl start logstash
+tail -f logstash-plain.log
+ll
+systemctl stop kibana
+systemctl restart elasticsearch
+systemctl start kibana
+tail -f logstash-plain.log
+systemctl restart logstash
+tail -f logstash-plain.log
+ll
+cat /dev/null > logstash-plain.log
+rm *.gz
+ll
+systemctl stop logstash
+cat /dev/null > logstash-plain.log
+ll
+cd ..
+systemctl stop kibana && systemctl restart elasticsearch && systemctl start kibana
+more E40-GTP-C_00002_20200604144557.json
+cd pcaps/
+more E40-GTP-C_00002_20200604144557.json
+systemctl stop kibana && systemctl restart elasticsearch && systemctl start kibana
+pwd
+systemctl start logstash
+tail -f logstash-plain.log
+systemctl stop logstash
+systemctl start logstash
+tail -f logstash-plain.log
+ll
+systemctl status logstash
+cd /home/monitor
+ll
+cd pcaps
+ll
+cd ..
+ll
+vi es-maping--GtpIcmpIpUdp.json
+apt-get update
+apt-get upgrade
+ll
+tshark --version
+tshark -G elastic-mapping --elastic-mapping-filter udp,ip,gtpv2,icmp
+vi ELK_GTP_processing.py
+systemctl status logstash
+systemctl status elasticsearch
+systemctl status kibana
+systemctl status logstash
+cd /var/log/logstash
+ll
+tail -f logstash-plain.log
+systemctl status logstash
+cd /etc/logstash
+ll
+cd conf.
+cd conf.d
+ll
+cat pcap-file.conf 
+ll
+ll /home/monitor/pcaps/E40-GTP-C_00002_20200604144557.json
+systemctl restart logstash
+sftp root@192.168.1.3
+ll
+tshark -r GTP-CP3233-UP--8thr.imeichange.pcap -T ek > GTP-CP3233-UP--8thr.imeichange.json
+vi GTP-CP3233-UP--8thr.imeichange.json
+ll pcaps/
+mv pcaps/E40-GTP-C_00002_20200604144557.json pcaps/big.json
+systemctl status logstash
+mv GTP-CP3233-UP--8thr.imeichange.json pcaps/E40-GTP-C_00002_20200604144557.json
+ll
+systemctl restart logstash
+tail -f /var/log/logstash/logstash-plain.log 
+systemctl stop logstash
+q!
+ll
+cd pcaps/
+ll
+vi E40-GTP-C_00002_20200604144557.json
+vi template-pcaps.json
+tshark --version
+vi template-pcaps.json
+history
+ll
+mv template-pcaps.json index-template.txt
+cp /etc/logstash/conf.d/pcap-file.conf ./logstash-conf.txt
+ll
+cat logstash-conf.txt 
+vi logstash-conf.txt 
+cd /etc/logstash/conf.
+cd /etc/logstash/conf.d
+ll
+vi pcap-file.conf 
+systemctl status logstash
+ll /home/monitor/pcaps/
+cat pcap-file.conf 
+ll /home/monitor/pcaps/
+cd /etc/logstash
+ll
+cd /var/log/logstash/
+ll
+rm *.gz
+date
+cat /dev/null > logstash-plain.log
+systemctl start logstash
+tail -f logstash-plain.log
+ll
+ll
+vi pcap-file.conf 
+ll /home/monitor/pcaps/E40-GTP-C_00002_20200604144557.json
+cat /home/monitor/pcaps/E40-GTP-C_00002_20200604144557.json
+more /home/monitor/pcaps/E40-GTP-C_00002_20200604144557.json
+du -sh . 
+du -sh /
+cd /
+du -h -d 1
+cd /snap
+ll
+ll core
+du -sh core
+cd core
+ll
+cd 11167/
+ll
+cd ..
+ll
+pwd
+find . |grep snap
+ll
+cd ..
+ll
+ll core18
+cd ..
+ll
+du -sh swapfile 
+fuser -cu  swapfile 
+ll
+du -h -d 1
+cd home
+ll
+cd monitor/
+ll
+ll minor-Bashing/
+mkdir SCRIPT
+mv minor-Bashing/* SCRIPT/
+ll snap/
+ll
+mv gtp_elk/ SCRIPT/
+ll logstash/
+cd ..
+cd monitor/
+rm logstash/
+rm -r logstash/
+ll
+ll Downloads/
+rm -r Downloads/
+ln -s Desktop Downloads
+ll
+rm minor-Bashing/
+rm -r minor-Bashing/
+ll pcaps/
+rm E40-GTP-C_00014_20200604145415.pcap big.json 
+cd pcaps/ && rm E40-GTP-C_00014_20200604145415.pcap big.json 
+ll
+cd ..
+ll
+mv GTP-CP3233-UP--8thr.imeichange.pcap pcaps/
+ll
+rm put-es-mapping--pcpap es-maping--GtpIcmpIpUdp.json bytes-plugin-1.0.2.zip bytes-plugin.zip 
+ll
+du -h -d 1
+cd .cache/
+ll
+cd ..
+rm -r .cache/*
+ll
+du -h -d 1
+cd ..
+ll
+cd ..
+ll
+cd /var
+ll
+du -h -d 1
+cd log
+ll
+du -h -d 1
+cd journal/
+ll
+cd 0dd8f8bd38a2408c8e483672ec20a946
+ll
+journalctl --vacuum-time=2d
+ll
+cd ..
+ll
+cd ..
+cd logstash
+ll
+rm logstash-deprecation-2021-06-14-1.log.gz
+ll
+..
+cd /etc/network/interfaces
+cd /etc/network
+ll
+cd /var/log
+ll
+du -h -d 1
+cd elasticsearch/
+ll
+rm *.gz
+ll
+rm gc.log.*
+ll
+cat /dev/null > 4697259
+ll
+cat /dev/null > gc.log 
+ll
+cat /dev/null > elasticsearch_deprecation.*
+cat /dev/null > elasticsearch_deprecation.log 
+cat /dev/null > elasticsearch_deprecation.json 
+ll
+rm 4697259 
+ll
+cd ..
+du -h -d 1
+du -h -d 1 /
+cd /var
+du -h -d 1
+cd lib
+ll
+du -h -d 1
+snap list --all
+cd
+ll
+cd /home/monitor/
+ll
+cd SCRIPT/
+ll
+vi clean_snap
+chmod +x clean_snap 
+./clean_snap 
+ll
+cd ..
+cd /root
+ll
+mv safe-networking/ /home/monitor/
+rm GTP-CP3233-UP--7thr.imeichange.json threat--smartone.csv es-map.json.orig es-map.json
+ll
+cd /home/monitor/
+ll
+rm requirements.txt 
+ll
+bin/logstash-plugin list
+/usr/share/logstash/bin/logstash-plugin list
+/usr/share/logstash/bin/logstash-plugin install logstash-filter-bytes
+ll
+cd /
+ll
+du -h -d 1
+cd /var
+du -h -d 1
+ll
+ls -la
+cd cache/
+ll
+cd ..
+ll
+du -sh
+du -h 
+du -h -d 1
+cd lib
+ll
+du -h -d 1
+ll
+df -h
+ifconfig -a
+netstat -tnap
+ifconfig -a
+iptables status
+ufw status
+ping 10.8.192.28
+netstat -tnap
+netstat -rn
+ping 10.8.194.1
+ufw status
+netstat -tnap|grep -e listen
+netstat -tnap|grep -e LISTEN
+cd /etc/cloud/cloud.cfg
+cd /etc
+cd netplan
+ll
+vi 01-network-manager-all.yaml 
+find . |grep net
+cd ..
+find . |grep net
+cd network
+ll
+cd ..
+cd systemd/
+ll
+cd network
+ll
+ifconfig -a 
+ifconfig -a
+ifconfig ens33 up
+ifconfig -a
+ifconfig ens33 down
+ifconfig -a
+ifconfig ens33 up
+ifconfig -a
+systemctl NetworkManager restart 
+systemctl restart NetworkManager
+ifconfig -a
+netstat -rn 
+ping 10.8.194.1
+netstat -tnap |grep LISTEN
+cacti
+history
+history |grep cacto
+history |grep cacto
+history |grep cacti
+history |grep cacti
+mysql -u cacti_user -p
+passwd monitor
+cvd /etc/ssh/
+cd /etc/ssh
+systemctl status ssh
+netstat -rn 
+route add default gw 10.8.194.28
+netstat -rn 
+route del default gw 10.8.194.1
+netstat -rn 
+ping 10.8.194.6
+ping 10.8.194.29
+ll
+cat sshd_config |grep -v #
+cat sshd_config
+1:q!
+ping 10.8.195.111
+telnet 10.8.195.111 22
+lastlog
+cat /var/log/auth.log
+cd /var/log
+ll
+ufw allow OpenSSH
+ufw status
+ufw allow 80
+ufw allow 22
+ufw status
+systemctl restart ssh
+systemctl status ssh
+ufw status
+ufw status verbose
+ufw status verbose numbered
+ufw status  numbered
+ufw delete 2
+ufw delete 6
+ufw status verbose
+ufw status numbered
+ufw delete 5
+ufw status numbered
+ufw allow 5500:5599/udp
+ufw status numbered
+ufw delete 1
+ufw status numbered
+ufw delete 4
+ufw status numbered
+shutdown -r now 
+sudo su 
+ufw status verbose
+ll
+cd /etc/logstash
+ll
+cd conf.d
+ll
+ssh panw_admin@10.8.194.29
+cacti
+cd /etc
+ll
+ll |grep cact
+ll |grep apac
+find . |grep php.ini
+vi php/*/cli/php.ini
+q!
+cat ./php/7.4/cli/php.ini |grep -v ;
+man grep
+cat ./php/7.4/cli/php.ini |grep -v ';'
+q!
+cat ./php/7.4/cli/php.ini |grep timezon
+cat /etc/timezone 
+shutdown -r now
+tcpdump -p udp port 5518
+cd /etc/logstash
+ll
+date
+ll
+cd conf.
+cd conf.d
+ll
+mv pcap-file.conf ../conf.old
+vi gtp-combi__hideconf 
+systemctl stop logstash
+systemctl stop elasticsearch
+systemctl stop kibana
+which logstash
+echo $PATH
+ll /usr/bin|grep ogsta
+ll /usr/local/bin|grep ogsta
+systemctl status logstash
+gtp-combi__hideconf usr/share/logstash/bin/logstash --path.settings /etc/logstash --debug
+cd /etc/logstash
+ll
+cd conf.d
+ll ../conf.old
+ll
+mv gtp-combi__hideconf gtp-combi.conf
+/usr/share/logstash/bin/logstash --path.settings /etc/logstash --debug
+q
+vi gtp-combi.conf 
+/usr/share/logstash/bin/logstash --path.settings /etc/logstash --debug
+q!
+vi gtp-combi.conf 
+/usr/share/logstash/bin/logstash --path.settings /etc/logstash --debug
+systemctl start elasticsearch
+systemctl start kibana
+systemctl status elasticsearch
+systemctl status kibana
+/usr/share/logstash/bin/logstash --path.settings /etc/logstash --debug
+systemctl status logstash
+systemctl start logstash
+systemctl stop logstash
+ll
+vi gtp-combi.conf 
+systemctl staus logstash
+systemctl status logstash
+systemctl start logstash
+systemctl status logstash
+df -h
+cd /etc
+cat php/*/apache2/php.ini|grep imez
+cat /etc/timezone 
+vi  php/*/apache2/php.ini
+cat php/*/apache2/php.ini|grep imez
+vi  php/*/cli/php.ini
+cat php/*/apache2/php.ini|grep memor
+cat php/*/apache2/php.ini|grep memory_limit
+vi php/*/apache2/php.ini
+cd apache2/conf-enabled/
+vi security.conf 
+cat /etc/hosts
+cd ..
+vi apache2.conf 
+systemctl restart apache2
+ll
+vi ports.conf
+systemctl restart apache2
+systemctl status apache2
+cd /etc/mysql
+ll
+cat debian-start 
+grep "[mysqld]" *
+grep '[mysqld]' *
+grep mysqld *
+cd mysql.conf.d
+ll
+systemctl snmpd status
+systemctl status snmpd
+cd /etc/snmp
+vi snmpd.conf
+cd /var/www
+systemctl stop apache2
+systemctl disable apache2
+ll
+cat html
+ll html
+mkdir cacticd ..
+ll
+mkdir cacti
+rm -r cacticd
+ll
+cd cacti
+cd /etc/nginx
+ll
+vi sites-available/
+cd sites-available/
+ll
+vi cacti
+systemctl restart nginx
+systemctl status nginx
+ufw status
+ufw allow 443
+dbconfig-common
+cd /var/www
+ll
+ll html/
+ll cacti
+find / |grep nginx |grep elast
+cd /etc/nginx
+ll
+cat htpasswd.kibana 
+cd sites-available/
+ll
+cd cacti
+vi cacti
+cd /usr/share/cacti
+ll
+cd site
+ll
+cd /var/www
+ll
+cd cacti
+ll
+ln -s /usr/share/cacti/site cacti
+cd /etc/nginx
+ll
+cd sites-available/
+ll
+cat default.dist 
+ll
+cd ../sites-enabled/
+ll
+ln -s /etc/nginx/sites-available/cacti cacti
+ll
+cd ..
+ll
+cd sites-available/
+ll
+cat default.dist 
+q!
+ll
+cat kibana
+ll
+cat cacti
+ll /var/www/cacti
+systemctl restart nginx
+systemctl status nginx
+ufw disable
+ufw stop
+ufw status
+systemctl restart nginx
+systemctl status nginx
+ll
+cd ..
+cd /var/log
+ll -lasrt
+systemctl status apache2
+systemctl disable apache2
+systemctl stop apache2
+nginx -t
+cd /etc/nginx/sites-available/
+ll
+cat cacti
+ll /var/www
+ll /var/www/html
+cat /var/www/html/index.html 
+cd /var/www/html
+ll
+cd ..
+ll
+ll cacti
+cp cacti html
+ll html
+cd /etc/nginx/sites-available
+ll
+cat kibana
+vi cacti
+systemctl restart nginx
+nginx -t
+ll
+cat cacti
+ll ../sites-enabled/
+cd /var/www
+ll
+ll html
+cd html
+ll ../cacti
+ll /usr/share/cacti/site
+ll
+mkdir cacti
+cd cacti
+pwd
+ln -s /usr/share/cacti/site cacti
+ll
+pwd
+cd ..
+ll
+systemctl restart nginx
+pwd
+ll
+grep kib index.html
+cd /etc/nginx
+ll
+cd conf.d
+ll
+cd ..
+cd sites-available/
+ll
+rm default
+ln -s cacti default
+ll
+systemctl restart nginx
+vi /etc/hosts
+nginx -t
+systemctl restart nginx
+wpd
+pwd
+ll
+cat cacti
+ll /var/www/cacti
+cd /usr/share/cacti
+ll
+cd ..
+ll
+cd /usr/share/cactill
+ll
+cd /etc/nginx
+ll
+cd sites-enabled/
+ll
+cd ../sites-available
+ll
+cat kibana
+vi cacti
+systemctl restart nginx
+cd /usr/share/cacti/
+ll
+cd site 
+ll
+vi index.php
+cat /etc/nginx/sites-available/cacti 
+cd /etc/nginx/
+ll
+cd sites-available/
+ll
+nginx -t
+ll /var/log/nginx/
+ll -lasrt /var/log/nginx/
+date
+cat  /var/log/nginx/access.log
+cat  /var/log/nginx/error.log
+tail -f   /var/log/nginx/error.log
+cd /var/www
+ll
+cd cacti
+ll
+ll /usr/share/
+cd ..
+ll
+cd cacti
+ll
+chown -R www-data:www-data /var/www/cacti
+chown -R www-data:www-data /var/www/html/cacti
+systemctl restart nginx
+cd cacti
+rm -r cacti
+ll
+ln -s /usr/share/cacti/site cacti
+ll
+chown -R www-data cacti
+chgrp -R www-data cacti
+chomd -R 0755 cacti
+chmod -R 0755 cacti
+systemctl restart cacti
+systemctl restart nginx
+ll
+cd /var/www
+ll
+cd /etc/nginx
+ll
+cd sites-available/
+ll
+cat cacti
+vi cacti
+systemctl restart nginx
+cd /var/
+ll
+chown -R www-data-www-data www
+ll
+chown -R www-data:www-data www
+ll
+systemctl restart nginx
+cd /etc/nginx
+ll
+cd sites-available/
+ll
+cat kibana
+cat cacti
+ll
+cp cacti /root/var-nginx-sitesavail-cacti
+vi cacti
+systemctl restart nginx
+vi cacti
+systemctl restart nginx
+cat cacti
+find /root |grep .bas
+find / |grep htaccess
+vi /usr/share/cacti/.htaccess
+vi /usr/share/cacti/cli/.htaccess
+mv /usr/share/cacti/cli/.htaccess /usr/share/cacti/cli/__was.htaccess
+systemctl restyart nginx
+systemctl restart nginx
+vi cacti
+cat cacti
+systemctl restart nginx
+cd /usr/share/cacti
+ll
+cd site
+ls -la |grep hta
+ll
+cd ..
+ll
+chown -R www-data:www-data site
+ll
+cd ..
+ll
+systemctl restart nginx
+cd /etc/nginx
+ll
+cd sites-available/
+ll
+vi cacti
+systemctl nginx restart
+systemctl restart nginx 
+cd /var/www
+ll
+cd /etc/nginx
+ll
+cd sites-available/
+ll
+vi cacti
+systemctl restart nginx
+ll
+cd /var/www
+ll
+cd /etc/nginx
+ll
+vi nginx.conf
+systemctl restart nginx
+vi /etc/nginx/sites-available/cacti 
+systemctl restart nginx
+vi /etc/nginx/sites-available/cacti 
+systemctl restart nginx
+vi nginx.conf
+systemctl restart nginx
+sestatus
+cat /etc/linnnnux
+cat /etc/selinux
+cd /etc/selinux
+ll
+cat semanage.conf 
+q!
+apparmor_status
+systemctl disable apparmor
+cd /etc/nginx
+ll
+cd sites-available/
+ll
+vi cacti
+systemctl restart nginx
+vi cacti
+systemctl restart nginx
+systemctl stop  nginx
+systemctl start  nginx
+vi cacti
+systemctl start  nginx
+cd /usr/share
+ll
+cd cacti
+ll
+chown -R root:root site
+ll
+tail -f /var/log/nginx/error.log
+shutdown -r now
+df -h
+ufw status
+ip addr show
+netstat -rn 
+history |grep route 
+history |grep route 
+route add default gw 10.8.194.28
+route del default gw 10.8.194.1
+cd
+ll
+cd /home/monitor
+ll
+cd ELK-settings/
+ll
+cd PAN-ELK/
+ll
+vi index-template--PAN-FWLOGSTREAM.json 
+ufw status
+ufw start
+service ufw status
+service ufw stop 
+service ufw status
+service ufw start
+ufw status
+ufw enable
+ufw status
+systemctl stop logstash
+systemctl status logstash
+history |grep tcpdump
+history |grep tcpdump
+tcpdump -p udp port 5518
+tcpdump -s0 -w ./logstream-5518--28092021.pcap
+ll
+rm logstream-5518--28092021.pcap 
+tcpdump -s0 -w ./logstream-5518--28092021.pcap
+ll -h
+chown monitor:monitor logstream-5518--28092021.pcap 
+mv logstream-5518--28092021.pcap /home/monitor
+vi 
+cd /etc/logstash
+cd conf.d/
+ll
+vi gtp-combi.conf 
+cp gtp-combi.conf /home/monitor
+ip addr show
+ll
+mv gtp-combi.conf ../conf.old/gtp-combi.conf--28092021
+cp /home/monitor/gtp-combi.conf .
+vi gtp-combi.conf 
+systemctl stop elasticsearch
+systemctl stop kibana
+history |grep logstash
+history |grep logstash
+/usr/share/logstash/bin/logstash --path.settings /etc/logstash --config.test_and_exit
+ufw status
+systemctl start elasticsearch
+systemctl start kibana
+systemctl start logstash
+history |grep tcpdump
+history |grep tcpdump
+tcpdump -p udp port 5518
+systemctl stop logstash
+ll
+vi gtp-combi.conf 
+/usr/share/logstash/bin/logstash --path.settings /etc/logstash
+cd /var/log/elasticsearch/
+ls -la
+ll -lasrt
+vi gc.log
+rm *.gz
+lssssssssss -la
+ls -la
+vi elasticsearch.log 
+cd /var/log/logstash
+ls -la
+rm *.gz
+ls -la
+vi logstash-plain.log 
+systemctl restart elasticsearch
+systemctl status l;ogstash
+systemctl status logstash
+systemctl start logstash
+ll
+tail -f logstash-plain.log 
+systemctl stop logstash
+vi /etc/logstash/conf.d/gtp-combi.conf 
+systemctl restart elasticsearch
+tail -f /var/log/elasticsearch/elasticsearch.log
+systemctl restart logstash
+tail -f logstash-plain.log 
+systemctl stop logstash
+systemctl restart elasticsearch
+systemctl status elasticsearch
+systemctl start logstash
+tail -f logstash-plain.log 
+ll
+systemctl stop logstash
+shutdown -r now
+cd /etc/logstash
+ll
+tail -f /var/log/logstash/logstash-plain.log 
+systemcttl    stop /var/log/logstash
+systemctl stop logstash
+systemctl start logstash
+tail -f /var/log/logstash/logstash-plain.log 
+systeeeeeeeeeeeeeeemctl stop logstash
+systemctl stop logstash
+tail -f /var/log/logstash/logstash-plain.log 
+systemctl start logstash
+tail -f /var/log/logstash/logstash-plain.log 
+systemctl stop logstash
+systemctl start logstash
+tail -f /var/log/logstash/logstash-plain.log 
+systemctl stop loogstash
+systemctl stop logstash
+pwd
+cd conf.d
+vi gtp-combi.conf 
+systemctl start logstash
+vi gtp-combi.conf 
+systemctl stop logstash
+ll
+vi gtp-combi.conf 
+systemctl start logstash
+tail -f /var/log/logstash/logstash-plain.log 
+systemmctl stop logstash
+systemctl stop logstash
+systemctl start logstash
+tail -f /var/log/logstash/logstash-plain.log 
+ll
+sysdtemctl stop logstash
+systemctl stop logstash
+vi gtp-combi.conf 
+systemctl restart logstash
+tail -f /var/log/logstash/logstash-plain.log 
+systemctl stop logstash
+vi gtp-combi.conf 
+systemctl restart logstash
+tail -f /var/log/logstash/logstash-plain.log 
+systemctl stop logstash
+vi gtp-combi.conf 
+shutdown -r now
+systemctl restart logstash
+tail -f /var/log/logstash/logstash-plain.log 
+systemctl stop logstash
+\
+vi gtp-combi.conf 
+systemctl start logstash
+tail -f /var/log/logstash/logstash-plain.log 
+systemctl status logstash
+systemctl stop logstash
+vi gtp-combi.conf 
+shutdown -r now
+systemctl status logstash
+vi /etc/logstash/conf.d/gtp-combi.conf 
+systemctl status logstash
+systemctl stop logstash
+systewmctl restart elasticsearch 
+systemctl restart elasticsearch 
+systemctl restart kibana
+systemctl restart logstash
+systemctl stop logstash
+systewmctl restart elasticsearch 
+systemctl restart elasticsearch 
+systemctl restart kibana
+systemctl restart logstash
+tail -f /var/log/logstash/logstash-plain.log 
+systemctl stop logstash
+systemctl restart logstash
+tail -f /var/log/logstash/logstash-plain.log 
+c
+systemctl 
+systemctl stoop logstash
+systemctl stop logstash
+vi /etc/logstash/conf.d/gtp-combi.conf 
+systemctl restart logstash
+systemctl stop logstash
+vi /etc/logstash/conf.d/gtp-combi.conf 
+systemctl restart logstash
+tail -f /var/log/logstash/logstash-plain.log 
+systemctl stop loogstash
+vi /etc/logstash/conf.d/gtp-combi.conf 
+systemctl restart logstash
+tail -f /var/log/logstash/logstash-plain.log 
+vi /etc/logstash/conf.d/gtp-combi.conf 
+systttttemctl stttopo loogstash
+systemctl stop logstash
+systemctl restart logstash
+systemctl stop logstash
+vi /etc/logstash/conf.d/gtp-combi.conf 
+syyyystemctl restart kibana
+systemctl restart elasticsearch
+systemctl restart kibana
+systemctl restart logstash
+tail -f /var/log/logstash/logstash-plain.log 
+systemctl stop logstash
+systemctl restart logstash
+tail -f /var/log/logstash/logstash-plain.log 
+systemctl stop logstash
+systemctl start logstash
+systemctl stop loogstash
+systemctl stop logstash
+systemctl start logstash
+vi 
+systemctl stop logstash
+cd /etc/logstash/conf.d
+vi gtp-combi.conf 
+cd /home/monitor
+ll
+mkdir ELK-conf
+cp /etc/logstash/conf.d/gtp-combi.conf ELK-conf/
+mv component-templates.tar.gz ELK-conf/
+cd ELK-conf/
+ll
+tar xvzf component-templates.tar.gz 
+ll
+mkdir COMPONENT_TEMPLATES
+mv *.json COMPONENT_TEMPLATES/
+cd COMPONENT_TEMPLATES/
+ll
+cat pan_fwlog_traffic.json 
+ll
+cat pan_fwlog_headers.json 
+ll
+cat pan_fwlog_gtp.json 
+ll
+cat pan_fwlog_threat.json 
+cd ..
+ll
+rm ._*
+ll
+mv component-templates.tar.gz COMPONENT_TEMPLATES/
+cat gtp-combi.conf 
+systemctl start logstash
+systemctl stop logstash
+cd /etc/logstash/conf.d/gtp-combi.conf 
+cd /etc/logstash/conf.d/
+vi gtp-combi.conf 
+history |grep /usr/share
+history |grep /usr/share
+/usr/share/logstash/bin/logstash --path.settings /etc/logstash --debug
+/usr/share/logstash/bin/logstash --path.settings /etc/logstash 
+q!
+history |grep tcpd
+history |grep tcpd
+tcpdump -s0 -w ./logstream-5518--28092021.pcap
+ll
+mv logstream-5518--28092021.pcap /home/monitor
+cd
+cd /home/monitor
+ll -lasrt
+tcpdump -p udp port 5518
+systemctl status logstash
+systemctl start logstash
+systemctl stop logstash
+cd //var/log/elasticsearch/
+ll
+rm *.gz
+cat gc.log.05
+rm gc.*
+ll
+vi elasticsearch.log
+cp elasticsearch.log /home/monitor
+syhstemctl status logstash
+systemctl status logstash
+systemctl start logstash
+systemctl stop logstash
+systemctl start logstash
+tcpdump -p udp port 5518
+ping 10.8.194.29 
+cd /etc/loogstash
+cd /etc/logstash
+cd conf.d
+ll
+cat gtp-combi.conf 
+ip addr show
+tcpdump -p udp port 5518
+ufw status
+systemctl status logstash
+vi /etc/logstash/conf.d/gtp-combi.conf 
+systemctl restart logstash
+ping 10.8.194.29
+pwd
+ll
+tcpdump -p udp port 5518
+vi gtp-combi.conf 
+systemctl stoop logstash
+systemctl stop logstash
+vi gtp-combi.conf 
+systemctl start logstash
+systemctl stop logstash
+systemctl start logstash
+systemctl stop logstash
+systemctl start logstash
+systemctl stop logstash
+vi gtp-combi.conf 
+cat gtp-combi.conf 
+systemctl start logstash
+tail -f /var/log/logstash/logstash-plain.log 
+ll
+cd /home/monitor
+ll
+mkdir ELK-STARHUB-LATEST
+cp try-join.html-json ELK-STARHUB-LATEST/
+date
+cp /etc/logstash/conf.d/gtp-combi.conf ELK-STARHUB-LATEST/
+vi ELK-STARHUB-LATEST/fwsets.txt
+ll
+tar cvzf ELK-STARHUB-LATEST.tgz ELK-STARHUB-LATEST/
+ll
+ip addr show
+ssh admin@10.8.194.10
+cd
+cd /home/monitor
+ll
+bzip2 -best catcall.pcap 
+bzip2 --best catcall.pcap 
+systemctl status logstash
+systemctl stop logstash
+ll
+gunzip CODE-19102021.tar.gz 
+tar xvf CODE-19102021.tar 
+cd CODE-19102021
+ll\
+ll
+vi index-mapping.json 
+cp gtp-combi.conf  /etc/logstash/conf.d/
+cd /etc/logstash/conf.d
+ll
+llcat gtp-combi.conf 
+cat gtp-combi.conf 
+vi gtp-combi.conf 
+systemctl restart elasticsearch
+systemctl restart kibana
+systemctl restart logstash
+cd
+ll
+cd /home/monitor
+ll
+cd CODE-19102021
+ll
+chown -R monitor:monitor .
+chmod +x threat_x_gtp-v1.1.py 
+./threat_x_gtp-v1.1.py 
+exit
+pwd
+PUT _component_template/pan-fwcomp-headers
+{   "version": 2,;   "template": {;     "mappings": {;       "properties": {;         "fw_log_time" : {;           "format" : "yyyy-MM-dd'T'HH:mm:ss.SSSZZZZZ",;           "index" : true,;           "ignore_malformed" : false,;           "store" : false,;           "type" : "date",;           "doc_values" : true;         },;         "logtype" : {;           "type" : "keyword";         },;         "serial" : {;           "type" : "keyword";         },;         "device_name" : {;           "type" : "keyword";         },;         "vsys" : {;           "type" : "keyword";         },;         "imsi" : {;           "type" : "keyword";         },;         "imei" : {;           "type" : "keyword";         },;         "seskey" : {;           "type" : "keyword";         },;         "session_stat" : {;           "type" : "keyword";         },;         "devkey" : {;           "type" : "keyword";         },;         "subkey" : {;           "type" : "keyword";         },;         "gtpkey_dst" : {;           "type" : "keyword";         },;         "gtpkey_src" : {;           "type" : "keyword";         },;         "gtpkey_ue" : {;           "type" : "keyword";         }
+}
+PUT _component_template/pan-fwcomp-threat
+{   "version": 1,;   "template": {;     "mappings": {;       "properties": {;         "threat_src" : {;           "index" : true,;           "type" : "ip",;           "doc_values" : true;         },;         "threat_dst" : {;           "index" : true,;           "type" : "ip",;           "doc_values" : true;         },;         "threat_sport" : {;           "type" : "keyword";         },;         "threat_dport" : {;           "type" : "keyword";         },;         "threat_proto" : {;           "type" : "keyword";         },;         "threat_direction" : {;           "type" : "keyword";         },;         "threat_app" : {;           "type" : "keyword";         },;         "threat_tunnel" : {;           "type" : "keyword";         },;         "threat_threatid" : {;           "type" : "integer";         },;         "threat_severity" : {;           "type" : "keyword";         },;         "threat_action" : {;           "type" : "keyword";         },;         "threat_sessionid" : {;           "type" : "keyword";         },;         "threat_subtype" : {;           "type" : "keyword";         },;         "threat_category" : {;           "type" : "keyword";         },;         "threat_flags" : {;           "type" : "keyword";         },;         "threat_user_agent" : {;           "type" : "keyword";         },;         "threat_referer" : {;           "type" : "keyword";         },;         "threat_http_method" : {;           "type" : "keyword";         },;         "threat_http_headers" : {;           "type" : "keyword";         },;         "threat_filetype" : {;           "type" : "keyword";         },;         "threat_filedigest" : {;           "type" : "keyword";         },;         "threat_file_url": {;           "type" : "keyword";         },;         "threat_sig_flags" : {;           "type" : "keyword";         },;         "threat_xff" : {;           "type" : "keyword";         },;         "threat_url_idx" : {;           "type" : "keyword";         },;         "threat_sender": {;           "type" : "keyword";         },;        "threat_subject" : {;           "type" : "keyword";         },;         "threat_recipient" : {;           "type" : "keyword";         },;         "threat_name" : {;           "type" : "text",;           "fields": {;             "keyword": {;             "type": "keyword",;             "ignore_above": 50;             }
+}
+PUT _component_template/pan-fwcomp-gtp
+{   "version": 1,;   "template": {;     "mappings": {;       "properties": {;         "gtp_src" : {;           "index" : true,;           "type" : "ip",;           "doc_values" : true;         },;         "gtp_dst" : {;           "index" : true,;           "type" : "ip",;           "doc_values" : true;         },;         "gtp_end_ip_addr" : {;           "index" : true,;           "type" : "ip",;           "doc_values" : true;         },;         "gtp_event_type" : {;           "type" : "keyword";         },;         "gtp_proto" : {;           "type" : "keyword";         },;         "gtp_cause_code" : {;           "type" : "keyword";         },;         "gtp_severity" : {;           "type" : "keyword";         },;         "gtp_sport" : {;           "type" : "keyword";         },;         "gtp_mcc" : {;           "type" : "keyword";         },;         "gtp_tunnel" : {;           "type" : "keyword";         },;         "gtp_mnc" : {;           "type" : "keyword";         },;         "gtp_cell_id" : {;           "type" : "keyword";         },;         "gtp_teid1" : {;           "type" : "keyword";         },;        "gtp_sessionid" : {;           "type" : "keyword";         },;        "gtp_msisdn" : {;           "type" : "keyword";         },
+cd /home/monitor
+ll
+ll -h
+kill -TERM 1006378
+tcpdump -p udp port 5518 -s0 -w fw-logstream-20102021.pcapng
+ps -ef |grep tcp
+cd /home/monitor
+ll -lasrth
+gzip -9 fw-logstream-20102021.pcapng 
+mv fw-logstream-20102021.pcapng.gz pcaps
+ifconfig
+pwd
+ll
+chmod +x threat_x_gtp-v1.2.py 
+./threat_x_gtp-v1.2.py 
+exit
+tcpdump -Ss0 -I ens33 -p udp port 5518 -w /home/monitor/alllogs-21102021.pcap
+df -h
+ps -ef |grep elastic
+cd /usr/
+cd /var
+ll
+vi /etc/group
+mkdir /burepo
+chown elastic:elastic /burepo
+cat /etc/group
+chown elasticsearch:elasticsearch /burepo
+chmod 775 /burepo
+pwd
+cd /home/monitor
+ll
+rm CODE-1*
+rm -r CODE-1*
+tar xvzf CODE-25102021.tgz 
+cd CODE-25102021
+cp gtp-combi.conf /etc/logstash/config.d
+vi /tcpdump -Ss0 -I ens33 -p udp port 5518 -w /home/monitor/alllogs-21102021.pcap
+cat  /etc/logstash
+cp gtp-combi.conf  /etc/logstash/conf.d/gtp-combi.conf 
+rm /etc/logstash/config.d
+cat /etc/logstash/conf.d/gtp-combi.conf 
+q!
+vi FW-log-columns
+systemctl stop logstash
+systemctl restart elasticsearch
+systemctl restart kibana
+ll /
+cd /etc/elastisearch
+cd /etc/elasticsearch/
+vi elasticsearch.yml 
+systemctl restart elsticsearch
+systemctl restart elasticsearch
+sssssssssystemctl restart loogstash
+systemctl restart logstash
+cd /home/monitor
+cd CODE-25102021
+nohup ./threat_x_gtp-v1.4.py & 
+chmod +x threat_x_gtp-v1.4.py 
+nohup ./threat_x_gtp-v1.4.py & 
+ll
+./threat_x_gtp-v1.4.py 
+exit
+cd ..
+chown -R monitor:monitor .
+exit
+chown root:root pan-fwlog.conf 
+chmod 664 pan-fwlog.conf 
+ll
+vi pan-fwlog.conf 
+ssh 10.8.194.10
+ssh admin@10.8.194.10
+systemctl start logstash
+date
+ll
+vi pan-fwlog.conf 
+cd /var/log/logstash
+ll -lasrt
+rm *.gz
+vi logstash-plain.log 
+pwd
+cd ../elasticsearch/
+ll
+rm *.gz
+ll
+tail -f elasticsearch.log 
+cd /etc/logstash/conf.d
+vi pan-fwlog.conf 
+cd
+exit
+vi /etc/systemd/timesyncd.conf 
+systemctl enable systemd-timesyncd
+systemctl restart systemd-timesyncd
+systemctl status systemd-timesyncd
+timedatectl timesync-status
+ip addr show
+ufw status
+ufw allow ntp
+ufw status
+timedatectl timesync-status
+systemctl restart systemd-timesyncd
+timedatectl timesync-status
+vi /etc/systemd/timesyncd.conf 
+systemctl restart systemd-timesyncd
+timedatectl timesync-status
+date
+ll -lasrt
+pwd
+rm '\'
+ll -klasrt
+rm *.log
+rm *.gz
+ll
+exit
+sudo su
+exit
+cd /hom/monitor
+cd /home/monitor
+ll
+tail -f threat_x_gtp-v1.45_2021-11-03T16:49:05.324612.log
+ps -ef |grep threat
+kill -TERM 1574329
+ps -ef |grep threat
+ll -lasrt
+cp threat_x_gtp-v1.46_2021-11-06T19\:21\:34.913013.log latest_log.log
+gzip latest_log.log 
+ll -lasrt
+chmod +x threat_x_gtp-v1.47.py 
+tcpdump -p udp port 5518
+systemctl status logstash
+kill -KILL 1292020
+systemctl status logstash
+ps -ef |grep threat
+kill -TERM 2180367
+ps -ef |grep threat
+kill -TERM 2182412
+df -h
+ps -ef |grep threat
+kill 2182903
+ps -ef |grep threat
+kill 2193663
+history
+timedatectl timesync-status
+df -h
+df
+cat /etc/logstash/conf.d/pan-fwlog.conf 
+ifconfig
+tcpdump -i ens34
+netstat -tunap
+df -h
+systemctl restart elasticsearch
+ll
+tcpdump -p udp port 5518
+ifconfig -a
+syhstemctl stop logstash
+vi /etc/logstash/conf.d/pan-fwlog.conf 
+ll
+rm *.log
+ps -ef |grep log
+kill -KILL 2086309
+systemctl stop logstash
+systemctl stop elasticsearch
+systemctl stop kibana
+systemctl start elasticsearch
+systemctl start kibana
+systemctl start logstash
+ll 
+pwd
+vi /etc/logstash/conf.d/pan-fwlog.conf 
+tcpdump -p udp port 5518
+ufw status
+systemctl stop logstash
+cd /etc/logstash
+ll
+cd conf.
+cd conf.d
+ll
+cat pan-fwlog.conf 
+more pan-fwlog.conf 
+ip addr show
+tcpdump -i ens34
+vi pan-fwlog.conf 
+:qvi pan-fwlog.conf vi pan-fwlog.conf vi pan-fwlog.conf vi pan-fwlog.conf 
+history |grep fw
+history |grep fw
+ufw status
+cd ..
+ll
+vi logstash.yml
+grep -v '#' logstash.yml
+history grep logstash |grep -v systemctl
+history grep logstash |grep -v systemctl
+history| grep logstash |grep -v systemctl
+history| grep logstash |grep -v systemctl
+cd conf.d
+vi pan-fwlog.conf 
+/usr/share/logstash/bin/logstash --path.settings /etc/logstash 
+systemctl status logstash
+systemctl status elasticsearch
+systemctl status kibana
+systemctl start logstash
+systemctl stop logstash
+vi pan-fwlog.conf 
+systemctl start logstash
+more pan-fwlog.conf 
+ufw status
+tcpdump -p udp port 5518 |grep 172.25.22
+ip addr show
+ifconfig
+ip link show
+tcpdump -p udp port 5518 |grep 172.25.22
+ifconfig
+sudo ifconfig ens35 172.25.22.2/24
+ping 172.25.22.1
+arp
+arp -a
+ifconfig ens35
+sudo ifconfig ens35 172.25.22.2/24
+ifconfig ens35
+ip addr show
+ifconfig 
+tcpdump -i ens35
+tcpdump -i ens34
+ip addr show
+anyone here ? 
+'hello, this is Mario ...
+'Abhishek ? 
+clear
+df -h
+pwd
+vi /usr/bin/restart-elk
+chmod +x /usr/bin/restart-elk
+[ $(whoami) neq "root" ] ; echo "no"
+[ $(whoami) neq "root" ] ; echo "no" ; fi
+if [ $(whoami) neq "root" ] ; echo "no" ; fi
+if [ $(whoami) neq "root" ] ; echo "no" fi ;
+if [ $(whoami) neq "root" ] ; then echo "no" fi ;
+arp -aq
+if [ "$(whoami)" neq "root" ] ; then ; echo "no" ; fi ;
+if [ "$(whoami)" neq "root" ] ; then ; echo "no" ; fi 
+if [ "$(whoami)" neq "root" ] ; then echo "no"; fi
+if [ "$(whoami)" != "root" ] ; then echo "no"; fi
+vi /usr/bin/restart-elk 
+top
+restart-elk
+systemctl status elasticsearch 
+systemctl status logstash
+kill -KILL 2103584
+systemctl status logstash
+systemctl status kibana
+systemctl stop kibana
+systemctl status kibana
+systemctl stoip elasticsearch 
+systemctl stop elasticsearch 
+systemctl start\
+systemctl start elasticsearch 
+systemctl start kibana
+systemctl start logstash
+systemctl status logstash
+tcpdump -p udp port 5518 
+history |grep tcpdump
+history |grep tcpdump
+2801mpe
+cd /etc/logstash
+ll
+cp pipelines.yml log4j2.properties  logstash.yml es-maping--GtpIcmpIpUdp.json startup.options /home/monitor/EVACUATE/
+ll conf.d
+cp conf.d/pan-fwlog.conf /home/monitor/EVACUATE/
+cd /etc/elasticsearch/
+ll
+tar cvf elasticonf.tar .
+mv elasticonf.tar /home/monitor/EVACUATE/
+cd ../kibana/
+ll
+tar cvf kibanaconf.tar .
+mv kibanaconf.tar /home/monitor/EVACUATE/
+cd /home/monitor
+ll
+ll CODE-25102021
+mv CODE-25102021 EVACUATE/
+mv threat_x_gtp-v1.52_2022-02-04T19:18:16.994010.log EVACUATE/
+cd /home/monitor
+ll
+ll EVACUATE/

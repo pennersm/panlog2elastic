@@ -1,0 +1,6 @@
+2021-10-26 06:39:53,359 [INFO] [1168576] [main] :: starting with internal timestamp 2021-10-26T06:39:53.359673
+2021-10-26 06:39:53,362 [WARNING] [1168576] [py.warnings] :: /home/monitor/.local/lib/python3.8/site-packages/elasticsearch/connection/base.py:200: ElasticsearchWarning: Elasticsearch built-in security features are not enabled. Without authentication, your cluster could be accessible to anyone. See https://www.elastic.co/guide/en/elasticsearch/reference/7.13/security-minimal-setup.html to enable security.
+  warnings.warn(message, category=ElasticsearchWarning)
+
+2021-10-26 06:39:53,362 [INFO] [1168576] [elasticsearch] :: GET http://127.0.0.1:9200/pan-fwlog-threat-*/_mapping [status:200 request:0.002s]
+2021-10-26 06:39:53,363 [INFO] [1168576] [elasticsearch] :: POST http://127.0.0.1:9200/pan-fwlog-threat-*/_field_caps?fields=%2A [status:200 request:0.001s]

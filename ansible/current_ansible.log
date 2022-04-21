@@ -1,0 +1,64 @@
+2022-04-07 12:22:14,998 p=80834 u=mpenners n=ansible | PLAY [Install docker] **********************************************************
+2022-04-07 12:22:15,017 p=80834 u=mpenners n=ansible | TASK [Wait timeout seconds for EC2 to have SSH up] *****************************
+2022-04-07 12:22:25,990 p=80834 u=mpenners n=ansible | ok: [15.160.166.106]
+2022-04-07 12:22:26,000 p=80834 u=mpenners n=ansible | TASK [install ubuntu repo packages] ********************************************
+2022-04-07 12:22:42,966 p=80834 u=mpenners n=ansible | changed: [15.160.166.106] => (item=net-tools)
+2022-04-07 12:22:57,635 p=80834 u=mpenners n=ansible | changed: [15.160.166.106] => (item=openjdk-11-jre-headless)
+2022-04-07 12:23:00,406 p=80834 u=mpenners n=ansible | ok: [15.160.166.106] => (item=python3)
+2022-04-07 12:23:33,886 p=80834 u=mpenners n=ansible | changed: [15.160.166.106] => (item=pip)
+2022-04-07 12:23:36,898 p=80834 u=mpenners n=ansible | ok: [15.160.166.106] => (item=ca-certificates)
+2022-04-07 12:23:39,554 p=80834 u=mpenners n=ansible | ok: [15.160.166.106] => (item=curl)
+2022-04-07 12:23:42,277 p=80834 u=mpenners n=ansible | ok: [15.160.166.106] => (item=gnupg)
+2022-04-07 12:23:45,117 p=80834 u=mpenners n=ansible | ok: [15.160.166.106] => (item=lsb-release)
+2022-04-07 12:23:45,134 p=80834 u=mpenners n=ansible | TASK [Configure FW add TCP] ****************************************************
+2022-04-07 12:23:46,836 p=80834 u=mpenners n=ansible | changed: [15.160.166.106] => (item=22)
+2022-04-07 12:23:48,208 p=80834 u=mpenners n=ansible | changed: [15.160.166.106] => (item=5601)
+2022-04-07 12:23:48,220 p=80834 u=mpenners n=ansible | TASK [Configure FW add UDP] ****************************************************
+2022-04-07 12:23:49,625 p=80834 u=mpenners n=ansible | changed: [15.160.166.106] => (item=5500:5599)
+2022-04-07 12:23:49,633 p=80834 u=mpenners n=ansible | TASK [Set FW logging] **********************************************************
+2022-04-07 12:23:51,422 p=80834 u=mpenners n=ansible | changed: [15.160.166.106]
+2022-04-07 12:23:51,429 p=80834 u=mpenners n=ansible | TASK [verify existing docker apt key] ******************************************
+2022-04-07 12:23:53,466 p=80834 u=mpenners n=ansible | changed: [15.160.166.106]
+2022-04-07 12:23:53,477 p=80834 u=mpenners n=ansible | TASK [verify docker stable Repo is added] **************************************
+2022-04-07 12:24:01,697 p=80834 u=mpenners n=ansible | changed: [15.160.166.106]
+2022-04-07 12:24:01,705 p=80834 u=mpenners n=ansible | TASK [ensure all docker packages are installed] ********************************
+2022-04-07 12:24:26,480 p=80834 u=mpenners n=ansible | changed: [15.160.166.106] => (item=docker-ce)
+2022-04-07 12:24:29,389 p=80834 u=mpenners n=ansible | ok: [15.160.166.106] => (item=docker-ce-cli)
+2022-04-07 12:24:32,204 p=80834 u=mpenners n=ansible | ok: [15.160.166.106] => (item=containerd.io)
+2022-04-07 12:24:40,997 p=80834 u=mpenners n=ansible | changed: [15.160.166.106] => (item=docker-compose)
+2022-04-07 12:24:41,009 p=80834 u=mpenners n=ansible | TASK [ensure dockerd is running] ***********************************************
+2022-04-07 12:24:44,441 p=80834 u=mpenners n=ansible | ok: [15.160.166.106]
+2022-04-07 12:24:44,454 p=80834 u=mpenners n=ansible | PLAY RECAP *********************************************************************
+2022-04-07 12:24:44,454 p=80834 u=mpenners n=ansible | 15.160.166.106             : ok=9    changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+2022-04-07 12:28:03,996 p=81139 u=mpenners n=ansible | PLAY [Install docker] **********************************************************
+2022-04-07 12:28:04,014 p=81139 u=mpenners n=ansible | TASK [Wait timeout seconds for EC2 to have SSH up] *****************************
+2022-04-07 12:28:15,368 p=81139 u=mpenners n=ansible | ok: [15.160.180.48]
+2022-04-07 12:28:15,377 p=81139 u=mpenners n=ansible | TASK [install ubuntu repo packages] ********************************************
+2022-04-07 12:28:31,746 p=81139 u=mpenners n=ansible | changed: [15.160.180.48] => (item=net-tools)
+2022-04-07 12:28:46,405 p=81139 u=mpenners n=ansible | changed: [15.160.180.48] => (item=openjdk-11-jre-headless)
+2022-04-07 12:28:49,028 p=81139 u=mpenners n=ansible | ok: [15.160.180.48] => (item=python3)
+2022-04-07 12:29:21,064 p=81139 u=mpenners n=ansible | changed: [15.160.180.48] => (item=pip)
+2022-04-07 12:29:23,844 p=81139 u=mpenners n=ansible | ok: [15.160.180.48] => (item=ca-certificates)
+2022-04-07 12:29:26,449 p=81139 u=mpenners n=ansible | ok: [15.160.180.48] => (item=curl)
+2022-04-07 12:29:29,090 p=81139 u=mpenners n=ansible | ok: [15.160.180.48] => (item=gnupg)
+2022-04-07 12:29:31,725 p=81139 u=mpenners n=ansible | ok: [15.160.180.48] => (item=lsb-release)
+2022-04-07 12:29:31,741 p=81139 u=mpenners n=ansible | TASK [Configure FW add TCP] ****************************************************
+2022-04-07 12:29:33,574 p=81139 u=mpenners n=ansible | changed: [15.160.180.48] => (item=22)
+2022-04-07 12:29:35,192 p=81139 u=mpenners n=ansible | changed: [15.160.180.48] => (item=5601)
+2022-04-07 12:29:35,203 p=81139 u=mpenners n=ansible | TASK [Configure FW add UDP] ****************************************************
+2022-04-07 12:29:36,744 p=81139 u=mpenners n=ansible | changed: [15.160.180.48] => (item=5500:5599)
+2022-04-07 12:29:36,754 p=81139 u=mpenners n=ansible | TASK [Set FW logging] **********************************************************
+2022-04-07 12:29:38,648 p=81139 u=mpenners n=ansible | changed: [15.160.180.48]
+2022-04-07 12:29:38,655 p=81139 u=mpenners n=ansible | TASK [verify existing docker apt key] ******************************************
+2022-04-07 12:29:40,751 p=81139 u=mpenners n=ansible | changed: [15.160.180.48]
+2022-04-07 12:29:40,759 p=81139 u=mpenners n=ansible | TASK [verify docker stable Repo is added] **************************************
+2022-04-07 12:29:48,554 p=81139 u=mpenners n=ansible | changed: [15.160.180.48]
+2022-04-07 12:29:48,565 p=81139 u=mpenners n=ansible | TASK [ensure all docker packages are installed] ********************************
+2022-04-07 12:30:11,889 p=81139 u=mpenners n=ansible | changed: [15.160.180.48] => (item=docker-ce)
+2022-04-07 12:30:14,660 p=81139 u=mpenners n=ansible | ok: [15.160.180.48] => (item=docker-ce-cli)
+2022-04-07 12:30:17,429 p=81139 u=mpenners n=ansible | ok: [15.160.180.48] => (item=containerd.io)
+2022-04-07 12:30:25,906 p=81139 u=mpenners n=ansible | changed: [15.160.180.48] => (item=docker-compose)
+2022-04-07 12:30:25,919 p=81139 u=mpenners n=ansible | TASK [ensure dockerd is running] ***********************************************
+2022-04-07 12:30:29,230 p=81139 u=mpenners n=ansible | ok: [15.160.180.48]
+2022-04-07 12:30:29,244 p=81139 u=mpenners n=ansible | PLAY RECAP *********************************************************************
+2022-04-07 12:30:29,244 p=81139 u=mpenners n=ansible | 15.160.180.48              : ok=9    changed=7    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0

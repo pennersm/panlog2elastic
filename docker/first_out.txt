@@ -1,0 +1,40 @@
+@Author: mpenners
+@Date:   2022-04-04T15:37:09+02:00
+@Filename: first_out.txt
+@Last modified by:   mpenners
+@Last modified time: 2022-04-04T15:37:47+02:00
+[15:31:49][mpenners@M-C02W10FNHTDG][ELASTIC]# docker-compose up -d
+[+] Running 14/14
+ ⠿ kibana Pulled                                                                                                                               53.7s
+   ⠿ 73c9cfb291da Already exists                                                                                                                0.0s
+   ⠿ ec7df805a77d Pull complete                                                                                                                 3.1s
+   ⠿ 257e83b8c3e9 Pull complete                                                                                                                 3.2s
+   ⠿ 5066f0f5558b Pull complete                                                                                                                 3.2s
+   ⠿ 4d6229f21c42 Pull complete                                                                                                                28.2s
+   ⠿ 6406ea349d97 Pull complete                                                                                                                28.3s
+   ⠿ 801be768ae38 Pull complete                                                                                                                49.7s
+   ⠿ d49bb5151555 Pull complete                                                                                                                49.8s
+   ⠿ e66dbaf20a9f Pull complete                                                                                                                49.8s
+   ⠿ 6dc2702d18a6 Pull complete                                                                                                                49.9s
+   ⠿ a803018cd360 Pull complete                                                                                                                50.0s
+   ⠿ c395487fb95f Pull complete                                                                                                                50.0s
+   ⠿ a502d1cfa3ea Pull complete                                                                                                                50.1s
+[+] Running 11/11
+ ⠿ Network elastic-pan_default      Created                                                                                                     0.1s
+ ⠿ Volume "elastic-pan_esdata01"    Created                                                                                                     0.0s
+ ⠿ Volume "elastic-pan_esdata02"    Created                                                                                                     0.0s
+ ⠿ Volume "elastic-pan_esdata03"    Created                                                                                                     0.0s
+ ⠿ Volume "elastic-pan_kibanadata"  Created                                                                                                     0.0s
+ ⠿ Volume "elastic-pan_certs"       Created                                                                                                     0.0s
+ ⠿ Container elastic-pan-setup-1    Healthy                                                                                                     6.0s
+ ⠿ Container elastic-pan-es01-1     Healthy                                                                                                    57.2s
+ ⠿ Container elastic-pan-es02-1     Healthy                                                                                                    47.1s
+ ⠿ Container elastic-pan-es03-1     Healthy                                                                                                    48.0s
+ ⠿ Container elastic-pan-kibana-1   Started                                                                                                    57.7s
+[15:34:22][mpenners@M-C02W10FNHTDG][ELASTIC]# docker ps
+CONTAINER ID   IMAGE                                                 COMMAND                  CREATED         STATUS                        PORTS                              NAMES
+b33ba8c427b4   docker.elastic.co/kibana/kibana:8.1.2                 "/bin/tini -- /usr/l…"   2 minutes ago   Up About a minute (healthy)   0.0.0.0:5601->5601/tcp             elastic-pan-kibana-1
+08e6c4e18eff   docker.elastic.co/elasticsearch/elasticsearch:8.1.2   "/bin/tini -- /usr/l…"   2 minutes ago   Up 2 minutes (healthy)        9200/tcp, 9300/tcp                 elastic-pan-es03-1
+2959c4710b6d   docker.elastic.co/elasticsearch/elasticsearch:8.1.2   "/bin/tini -- /usr/l…"   2 minutes ago   Up 2 minutes (healthy)        9200/tcp, 9300/tcp                 elastic-pan-es02-1
+8eb82d733945   docker.elastic.co/elasticsearch/elasticsearch:8.1.2   "/bin/tini -- /usr/l…"   2 minutes ago   Up 2 minutes (healthy)        0.0.0.0:9200->9200/tcp, 9300/tcp   elastic-pan-es01-1
+[15:36:03][mpenners@M-C02W10FNHTDG][ELASTIC]#

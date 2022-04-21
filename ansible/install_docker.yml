@@ -1,0 +1,129 @@
+# @Author: mpenners
+# @Date:   2022-04-07T12:14:29+02:00
+# @Filename: install_docker.yml
+# @Last modified by:   mpenners
+# @Last modified time: 2022-04-09T12:37:08+02:00
+
+
+
+- name: Install docker
+  hosts: docker_hosts
+  gather_facts: no
+  become: yes
+
+  tasks:
+
+    - name: Wait timeout seconds for EC2 to have SSH up
+      wait_for_connection:
+        timeout: 120
+
+    - name: install ubuntu repo packages
+      apt:
+        name: "{{item}}"
+        state: present
+        update_cache: true
+      loop:
+        - net-tools
+        - openjdk-11-jre-headless
+        - python3
+        - pip
+        - ca-certificates
+        - curl
+        - gnupg
+        - lsb-release
+
+# traceroute, inetutils-traceroute
+
+    - name: Configure FW add TCP
+      ufw:
+        rule: allow
+        log: yes
+        port: "{{item}}"
+        proto: tcp
+      loop:
+          - 22
+          - 5601
+
+    - name: Configure FW add UDP
+      ufw:
+        rule: allow
+        log: yes
+        port: "{{item}}"
+        proto: udp
+      loop:
+          - 5500:5599
+
+    - name: Set FW logging
+      ufw:
+        logging: on
+        state: enabled
+
+
+    - name: verify existing docker apt key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: verify docker stable Repo is added
+      apt_repository:
+        repo: 'deb https://download.docker.com/linux/ubuntu focal stable'
+        state: present
+
+    - name: ensure all docker packages are installed
+      apt:
+        name: "{{item}}"
+        state: present
+        update_cache: true
+      loop:
+        - docker-ce
+        - docker-ce-cli
+        - containerd.io
+        - docker-compose
+
+    - name: ensure dockerd is running
+      service:
+        name: docker
+        state: started
+
+    - name: Reboot EC2 instance
+      tags: reboot
+      reboot:
+        reboot_timeout: 1800
+
+    - name: Wait for the reboot to complete
+      wait_for_connection:
+       connect_timeout: 10
+       sleep: 5
+       delay: 5
+       timeout: 300
+
+# this is obvious but does not help with the change of file when containerd is used
+# https://stackoverflow.com/questions/48957195/how-to-fix-docker-got-permission-denied-issue
+# for SElinux additionally run 'setfacl --modify user::rw /var/run/docker.sock
+    - name: make sure docker socket will be accessible
+      ansible.builtin.shell: usermod -aG docker ubuntu
+
+
+    - name: Prepare the node and run the docker-compose up against previously provisioned dockerfile
+      ansible.builtin.shell: chmod +x ./run_docker_compose.sh && ./run_docker_compose.sh
+      args:
+        chdir: /home/ubuntu
+
+#    - name: Verify the elasticstack URL is reachable
+
+#
+#
+#   - name: install java
+#      apt:
+#        name: "{{java}}"
+#        state: present
+#    - name: install Jenkins
+#      apt:
+#        name: jenkins
+#        state: latest
+
+#    - name: Start jenkins
+#      service:
+#        name: jenkins
+#        enabled: true
+#        state: started
