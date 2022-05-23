@@ -1,0 +1,37 @@
+# @Author: mpenners
+# @Date:   2022-04-27T11:24:10+02:00
+# @Filename: elasticsearch.yml
+# @Last modified by:   mpenners
+# @Last modified time: 2022-05-09T19:38:47+02:00
+#----------------------------------------------------------------------------------------
+node.name: es02
+path.data: /usr/share/elasticsearch/data
+path.logs: /usr/share/elasticsearch/logs
+path.repo: /usr/share/elasticsearch/snapshots
+bootstrap.memory_lock: true
+#network.host: 127.0.0.1
+network.host: [ _local_, _site_]
+http.port: 9200
+transport.port: 9300
+#this only works in kibana not here: logging.root.level: info
+
+discovery.seed_hosts: es01,es02
+cluster.name: pan-elastic-cl
+cluster.initial_master_nodes: es01,es02
+xpack.security.http.ssl.client_authentication: optional
+
+
+xpack.security.enabled: true
+
+xpack.security.http.ssl.enabled: true
+xpack.security.http.ssl.verification_mode: certificate
+xpack.security.http.ssl.key: /usr/share/elasticsearch/config/certs/es02/es02.key
+xpack.security.http.ssl.certificate: /usr/share/elasticsearch/config/certs/es02/es02.crt
+xpack.security.http.ssl.certificate_authorities: /usr/share/elasticsearch/config/certs/ca/ca.crt
+
+xpack.security.transport.ssl.enabled: true
+xpack.security.transport.ssl.verification_mode: certificate
+xpack.security.transport.ssl.key: /usr/share/elasticsearch/config/certs/es02/es02.key
+xpack.security.transport.ssl.certificate: /usr/share/elasticsearch/config/certs/es02/es02.crt
+xpack.security.transport.ssl.certificate_authorities: /usr/share/elasticsearch/config/certs/ca/ca.crt
+xpack.license.self_generated.type: basic

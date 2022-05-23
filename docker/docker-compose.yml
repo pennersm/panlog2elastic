@@ -2,16 +2,26 @@
 # @Date:   2022-04-04T15:22:16+02:00
 # @Filename: docker-compose.yml
 # @Last modified by:   mpenners
-# @Last modified time: 2022-04-04T15:30:05+02:00
+# @Last modified time: 2022-05-09T20:43:18+02:00
 #
 # https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
-version: "2.2"
-
+version: "3.3"
 services:
-  setup:
+#------------------------------------------------------------------
+# one dummycontainer to create a volume with needed certificates
+  setupdummy:
     image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
     volumes:
-      - certs:/usr/share/elasticsearch/config/certs
+      - type: volume
+        source: elk-pan-certs
+        target: ${CERT_ROOT}
+      - type: bind
+        source: ./elk/setup_certs
+        target: ${ES_HOME}/setup_certs
+      - type: bind
+        source: .env
+        target: ${ES_HOME}/setup_certs/.env
+
     user: "0"
     command: >
       bash -c '
@@ -22,198 +32,224 @@ services:
           echo "Set the KIBANA_PASSWORD environment variable in the .env file";
           exit 1;
         fi;
-        if [ ! -f certs/ca.zip ]; then
-          echo "Creating CA";
-          bin/elasticsearch-certutil ca --silent --pem -out config/certs/ca.zip;
-          unzip config/certs/ca.zip -d config/certs;
-        fi;
-        if [ ! -f certs/certs.zip ]; then
-          echo "Creating certs";
-          echo -ne \
-          "instances:\n"\
-          "  - name: es01\n"\
-          "    dns:\n"\
-          "      - es01\n"\
-          "      - localhost\n"\
-          "    ip:\n"\
-          "      - 127.0.0.1\n"\
-          "  - name: es02\n"\
-          "    dns:\n"\
-          "      - es02\n"\
-          "      - localhost\n"\
-          "    ip:\n"\
-          "      - 127.0.0.1\n"\
-          "  - name: es03\n"\
-          "    dns:\n"\
-          "      - es03\n"\
-          "      - localhost\n"\
-          "    ip:\n"\
-          "      - 127.0.0.1\n"\
-          > config/certs/instances.yml;
-          bin/elasticsearch-certutil cert --silent --pem -out config/certs/certs.zip --in config/certs/instances.yml --ca-cert config/certs/ca/ca.crt --ca-key config/certs/ca/ca.key;
-          unzip config/certs/certs.zip -d config/certs;
-        fi;
-        echo "Setting file permissions"
-        chown -R root:root config/certs;
-        find . -type d -exec chmod 750 \{\} \;;
-        find . -type f -exec chmod 640 \{\} \;;
-        echo "Waiting for Elasticsearch availability";
-        until curl -s --cacert config/certs/ca/ca.crt https://es01:9200 | grep -q "missing authentication credentials"; do sleep 30; done;
-        echo "Setting kibana_system password";
-        until curl -s -X POST --cacert config/certs/ca/ca.crt -u elastic:${ELASTIC_PASSWORD} -H "Content-Type: application/json" https://es01:9200/_security/user/kibana_system/_password -d "{\"password\":\"${KIBANA_PASSWORD}\"}" | grep -q "^{}"; do sleep 10; done;
-        echo "All done!";
+        echo "calling bind-mounted setup script in docker-compose service command" ;
+        chmod 2755 ${ES_HOME}/setup_certs/setup_certs.sh ;
+        chmod  755 ${ES_HOME}/setup_certs/.env ;
+        ${ES_HOME}/setup_certs/setup_certs.sh ;
       '
     healthcheck:
-      test: ["CMD-SHELL", "[ -f config/certs/es01/es01.crt ]"]
+      test: ["CMD-SHELL", "[ -f ${ES_HOME}/config/certs/es01/es01.crt ]"]
+      interval: 1s
+      timeout: 5s
+      retries: 120
+#------------------------------------------------------------------
+# elasticsearch node es01
+# original image unchanged only edit
+#ENTRYPOINT ["/bin/tini" "--" "/usr/local/bin/docker-entrypoint.sh"]
+  es01:
+    depends_on:
+      - setupdummy
+    image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
+    volumes:
+      - type: volume
+        source: esdata01
+        target: ${ES_HOME}/data
+      - type: volume
+        source: elk-pan-certs
+        target: ${ES_HOME}/config/certs
+      - type: bind
+        source: ./elk/elasticsearch/es01/config
+        target: ${ES_HOME}/config
+      - type: bind
+        source: ./elk/kibana/pan-elk/snapshots
+        target: ${ES_HOME}/snapshots
+    user: "${ELKUID}"
+    environment:
+      - ES_HOME=${ES_HOME}
+      - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+      - ES_JAVA_HEAP=${ES_JAVA_HEAP}
+      - bootstrap.memory_lock=true
+    ports:
+      - ${ES_PORT}:9200
+      - ${EST_PORT}:9300
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+#    command: bash -c "while true; do sleep 300; done"
+    command: >
+      bash -c '
+        while [ ! -f "${ES_HOME}/config/certs/es01/es01.crt" ]; do sleep 5; done;
+        /usr/local/bin/docker-entrypoint.sh eswrapper
+      '
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "curl -s --cacert ${ES_HOME}/config/certs/ca/ca.crt https://localhost:9200 | grep -q 'missing authentication credentials'",
+        ]
       interval: 1s
       timeout: 5s
       retries: 120
 
-  es01:
+
+#  es02:
+#    depends_on:
+#      - es01
+#    image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
+#    volumes:
+#      - type: volume
+#        source: esdata02
+#        target: ${ES_HOME}/data
+#      - type: volume
+#        source: elk-pan-certs
+#        target: ${ES_HOME}/config/certs
+#      - type: bind
+#        source: ./elk/elasticsearch/es02/config
+#        target: ${ES_HOME}/config
+#      - type: bind
+#        source: ./elk/elasticsearch/kibana/pan-elk/snapshots
+#        target: ${ES_HOME}/snapshots
+#    user: "${ELKUID}"
+#    environment:
+#      - ES_HOME=${ES_HOME}
+#
+#      - bootstrap.memory_lock=true
+#    command: >
+#      bash -c '
+#        while [ ! -f "${ES_HOME}/config/certs/es02/es02.crt" ]; do sleep 10; done;
+#        /usr/local/bin/docker-entrypoint.sh eswrapper
+#      '
+#    ulimits:
+#      memlock:
+#        soft: -1
+#        hard: -1
+#
+#    healthcheck:
+#      test:
+#        [
+#          "CMD-SHELL",
+#          "curl -s --cacert ${ES_HOME}/config/certs/ca/ca.crt https://localhost:9200 | grep -q 'missing authentication credentials'",
+#        ]
+#      interval: 1s
+#      timeout: 5s
+#      retries: 120
+
+#curl -v https://localhost:9200 -u elastic
+
+#  es03:
+#    depends_on:
+#      - es02
+#    image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
+#    volumes:
+#      - type: volume
+#        source: esdata03
+#        target: /usr/share/elasticsearch/data
+#      - type: volume
+#        source: elk-pan-certs
+#        target: /usr/share/elasticsearch/config/certs
+#      - type: bind
+#        source: ./elk/elasticsearch/es03/config
+#        target: /usr/share/elasticsearch/config
+#      - type: bind
+#        source: ./elk/elasticsearch/kibana/pan-elk/snapshots
+#        target: ${ES_HOME}/snapshots
+#    environment:
+#      - ES_HOME=${ES_HOME}
+#    command: >
+#      bash -c '
+#        while [ ! -f "${ES_HOME}/config/certs/es03/es03.crt" ]; do sleep 5; done;
+#        /usr/local/bin/docker-entrypoint.sh eswrapper
+#      '
+#    ulimits:
+#      memlock:
+#        soft: -1
+#        hard: -1
+
+  ls01:
     depends_on:
-      setup:
-        condition: service_healthy
-    image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
+      - kibana01
+    image: docker.elastic.co/logstash/logstash:${STACK_VERSION}
     volumes:
-      - certs:/usr/share/elasticsearch/config/certs
-      - esdata01:/usr/share/elasticsearch/data
-    ports:
-      - ${ES_PORT}:9200
+      - type: volume
+        source: lsdata01
+        target: /usr/share/logstash/data
+      - type: volume
+        source: elk-pan-certs
+        target: /usr/share/logstash/config/certs
+      - type: bind
+        source: ./elk/logstash/ls01/config
+        target: /usr/share/logstash/config
+    user: "${ELKUID}"
     environment:
-      - node.name=es01
-      - cluster.name=${CLUSTER_NAME}
-      - cluster.initial_master_nodes=es01,es02,es03
-      - discovery.seed_hosts=es02,es03
-      - ELASTIC_PASSWORD=${ELASTIC_PASSWORD}
+      - LS_HOME=${LS_HOME}
+      - ES_JAVA_HEAP=${ES_JAVA_HEAP}
       - bootstrap.memory_lock=true
-      - xpack.security.enabled=true
-      - xpack.security.http.ssl.enabled=true
-      - xpack.security.http.ssl.key=certs/es01/es01.key
-      - xpack.security.http.ssl.certificate=certs/es01/es01.crt
-      - xpack.security.http.ssl.certificate_authorities=certs/ca/ca.crt
-      - xpack.security.http.ssl.verification_mode=certificate
-      - xpack.security.transport.ssl.enabled=true
-      - xpack.security.transport.ssl.key=certs/es01/es01.key
-      - xpack.security.transport.ssl.certificate=certs/es01/es01.crt
-      - xpack.security.transport.ssl.certificate_authorities=certs/ca/ca.crt
-      - xpack.security.transport.ssl.verification_mode=certificate
-      - xpack.license.self_generated.type=${LICENSE}
-    mem_limit: ${MEM_LIMIT}
+    ports:
+      - ${LS_PORT}:5044
+      - ${FWLOGRX_PORT}:${FWLOGRX_PORT}/udp
+    command: >
+      bash -c '
+        while [ ! -f "${LS_HOME}/config/certs/ls01/ls01.crt" ]; do sleep 60; done;
+        /usr/local/bin/docker-entrypoint
+        tail -f /dev/null
+      '
+#        /usr/local/bin/docker-entrypoint
     ulimits:
       memlock:
         soft: -1
         hard: -1
+#
     healthcheck:
       test:
         [
           "CMD-SHELL",
-          "curl -s --cacert config/certs/ca/ca.crt https://localhost:9200 | grep -q 'missing authentication credentials'",
+          "curl --insecure -v --cacert ${LS_HOME}/config/certs/ls01/ls01.crt https://es01:9200 -u logstash_pan-fwlog:${LOGSTASH_PASSWORD} 2>&1 |grep Accept",
         ]
-      interval: 10s
-      timeout: 10s
+      interval: 1s
+      timeout: 5s
       retries: 120
 
-  es02:
+
+
+
+
+
+
+
+
+#
+  kibana01:
     depends_on:
       - es01
-    image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
-    volumes:
-      - certs:/usr/share/elasticsearch/config/certs
-      - esdata02:/usr/share/elasticsearch/data
-    environment:
-      - node.name=es02
-      - cluster.name=${CLUSTER_NAME}
-      - cluster.initial_master_nodes=es01,es02,es03
-      - discovery.seed_hosts=es01,es03
-      - bootstrap.memory_lock=true
-      - xpack.security.enabled=true
-      - xpack.security.http.ssl.enabled=true
-      - xpack.security.http.ssl.key=certs/es02/es02.key
-      - xpack.security.http.ssl.certificate=certs/es02/es02.crt
-      - xpack.security.http.ssl.certificate_authorities=certs/ca/ca.crt
-      - xpack.security.http.ssl.verification_mode=certificate
-      - xpack.security.transport.ssl.enabled=true
-      - xpack.security.transport.ssl.key=certs/es02/es02.key
-      - xpack.security.transport.ssl.certificate=certs/es02/es02.crt
-      - xpack.security.transport.ssl.certificate_authorities=certs/ca/ca.crt
-      - xpack.security.transport.ssl.verification_mode=certificate
-      - xpack.license.self_generated.type=${LICENSE}
-    mem_limit: ${MEM_LIMIT}
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
-    healthcheck:
-      test:
-        [
-          "CMD-SHELL",
-          "curl -s --cacert config/certs/ca/ca.crt https://localhost:9200 | grep -q 'missing authentication credentials'",
-        ]
-      interval: 10s
-      timeout: 10s
-      retries: 120
-
-  es03:
-    depends_on:
-      - es02
-    image: docker.elastic.co/elasticsearch/elasticsearch:${STACK_VERSION}
-    volumes:
-      - certs:/usr/share/elasticsearch/config/certs
-      - esdata03:/usr/share/elasticsearch/data
-    environment:
-      - node.name=es03
-      - cluster.name=${CLUSTER_NAME}
-      - cluster.initial_master_nodes=es01,es02,es03
-      - discovery.seed_hosts=es01,es02
-      - bootstrap.memory_lock=true
-      - xpack.security.enabled=true
-      - xpack.security.http.ssl.enabled=true
-      - xpack.security.http.ssl.key=certs/es03/es03.key
-      - xpack.security.http.ssl.certificate=certs/es03/es03.crt
-      - xpack.security.http.ssl.certificate_authorities=certs/ca/ca.crt
-      - xpack.security.http.ssl.verification_mode=certificate
-      - xpack.security.transport.ssl.enabled=true
-      - xpack.security.transport.ssl.key=certs/es03/es03.key
-      - xpack.security.transport.ssl.certificate=certs/es03/es03.crt
-      - xpack.security.transport.ssl.certificate_authorities=certs/ca/ca.crt
-      - xpack.security.transport.ssl.verification_mode=certificate
-      - xpack.license.self_generated.type=${LICENSE}
-    mem_limit: ${MEM_LIMIT}
-    ulimits:
-      memlock:
-        soft: -1
-        hard: -1
-    healthcheck:
-      test:
-        [
-          "CMD-SHELL",
-          "curl -s --cacert config/certs/ca/ca.crt https://localhost:9200 | grep -q 'missing authentication credentials'",
-        ]
-      interval: 10s
-      timeout: 10s
-      retries: 120
-
-  kibana:
-    depends_on:
-      es01:
-        condition: service_healthy
-      es02:
-        condition: service_healthy
-      es03:
-        condition: service_healthy
     image: docker.elastic.co/kibana/kibana:${STACK_VERSION}
     volumes:
-      - certs:/usr/share/kibana/config/certs
-      - kibanadata:/usr/share/kibana/data
+      - type: volume
+        source: kibanadata01
+        target: /usr/share/kibana/data
+      - type: volume
+        source: elk-pan-certs
+        target: ${KIBANA_HOME}/config/certs
+      - type: bind
+        source: ./elk/kibana/kibana01/config
+        target: /usr/share/kibana/config
+      - type: bind
+        source: ./elk/kibana/pan-elk/dashboards
+        target: /usr/share/kibana/dashboards
     ports:
       - ${KIBANA_PORT}:5601
     environment:
-      - SERVERNAME=kibana
-      - ELASTICSEARCH_HOSTS=https://es01:9200
+#      - SERVERNAME=kibana
+      - KIBANA_HOME="/usr/share/kibana"
+#      - ELASTICSEARCH_HOSTS=https://es01:9200
       - ELASTICSEARCH_USERNAME=kibana_system
       - ELASTICSEARCH_PASSWORD=${KIBANA_PASSWORD}
-      - ELASTICSEARCH_SSL_CERTIFICATEAUTHORITIES=config/certs/ca/ca.crt
-    mem_limit: ${MEM_LIMIT}
+#      - ELASTICSEARCH_SSL_CERTIFICATEAUTHORITIES=${KIBANA_HOME}/certs/ca/ca.crt
+    command: >
+      bash -c '
+        while [ ! -f "${KIBANA_HOME}/config/certs/kibana01/kibana01.crt" ]; do sleep 15; done;
+        /usr/bin/tini -s -- /usr/local/bin/kibana-docker
+      '
     healthcheck:
       test:
         [
@@ -224,14 +260,37 @@ services:
       timeout: 10s
       retries: 120
 
+
+
+#    command:
+#      [ "/usr/share/elasticsearch/bin/elasticsearch", "-v" ]
+#    configs:
+#      - jvm.options
+#      - elasticsearch.yml
+#      - jvj2.properties
+#------------------------------------------------------------------
+#configs:
+#  jvm.options:
+#    file: ./elk/elasticsearch/es01/config/jvm.options
+#  elasticsearch.yml:
+#    file: ./elk/elasticsearch/es01/config/elasticsearch.yml
+#  jvj2.properties:
+#    file: ./elk/elasticsearch/es01/config/jvj2.properties
 volumes:
-  certs:
-    driver: local
+  elk-pan-certs:
   esdata01:
-    driver: local
-  esdata02:
-    driver: local
-  esdata03:
-    driver: local
-  kibanadata:
-    driver: local
+#  esdata02:
+#  esdata03:
+  kibanadata01:
+  lsdata01:
+#------------------------------------------------------------------
+#  ls01:
+#    image: logstash-8.1.2-panmod-0.2
+#    volumes:
+#      - kibanaconf:/usr/share/kibana/config
+#      - kibanadata:/usr/share/kibana/data
+#    ports:
+#      - 5044:5044
+#      - 9600:9600
+#    links:
+#      - es01

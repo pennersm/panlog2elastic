@@ -1,0 +1,40 @@
+# @Author: mpenners
+# @Date:   2022-04-27T11:24:10+02:00
+# @Filename: elasticsearch.yml
+# @Last modified by:   mpenners
+# @Last modified time: 2022-05-09T21:13:51+02:00
+#----------------------------------------------------------------------------------------
+node.name: es01
+path.data: /usr/share/elasticsearch/data
+path.logs: /usr/share/elasticsearch/logs
+path.repo: /usr/share/elasticsearch/snapshots
+bootstrap.memory_lock: true
+#network.host: 0.0.0.0
+network.host: [ _local_, _site_]
+http.port: 9200
+transport.port: 9300
+discovery.type: single-node
+cluster.name: pan-elastic-cl
+#discovery.seed_hosts: es02
+#cluster.initial_master_nodes: es01,es02
+
+
+xpack.security.enabled: true
+xpack.security.enrollment.enabled: true
+xpack.security.http.ssl.enabled: true
+xpack.security.http.ssl.key: /usr/share/elasticsearch/config/certs/es01/es01.key
+xpack.security.http.ssl.certificate: /usr/share/elasticsearch/config/certs/es01/es01.crt
+xpack.security.http.ssl.certificate_authorities: /usr/share/elasticsearch/config/certs/ca/ca.crt
+xpack.security.http.ssl.verification_mode: certificate
+xpack.security.transport.ssl.enabled: true
+xpack.security.transport.ssl.key: /usr/share/elasticsearch/config/certs/es01/es01.key
+xpack.security.transport.ssl.certificate: /usr/share/elasticsearch/config/certs/es01/es01.crt
+xpack.security.transport.ssl.certificate_authorities: /usr/share/elasticsearch/config/certs/ca/ca.crt
+xpack.security.transport.ssl.verification_mode: certificate
+xpack.license.self_generated.type: basic
+
+#curl localhost:9200/_cat/nodes?v
+
+#ELASTIC_PASSWORD_FILE
+#KEYSTORE_PASSWORD_FILE
+xpack.security.http.ssl.client_authentication: optional

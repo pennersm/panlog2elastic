@@ -1,0 +1,6 @@
+export ANSIBLE_INVENTORY="hosts"
+export ANSIBLE_LOG_PATH="current_ansible.log"
+export ANSIBLE_PLAYBOOK_COMMAND="ansible-playbook ./install_docker.yml >/dev/null 2>&1"
+export ANSIBLE_PRIVATE_KEY_FILE="/Users/mpenners/.aws/id_aws_elastic"
+export ANSIBLE_REMOTE_USER="ubuntu"
+export ANSIBLE_HOST_KEY_CHECKING="False"

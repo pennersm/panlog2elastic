@@ -2,7 +2,7 @@
 # @Date:   2022-04-07T12:14:29+02:00
 # @Filename: install_docker.yml
 # @Last modified by:   mpenners
-# @Last modified time: 2022-04-09T12:37:08+02:00
+# @Last modified time: 2022-05-19T18:09:42+02:00
 
 
 
@@ -29,10 +29,11 @@
         - pip
         - ca-certificates
         - curl
+        - nginx
+        - inetutils-traceroute
         - gnupg
         - lsb-release
 
-# traceroute, inetutils-traceroute
 
     - name: Configure FW add TCP
       ufw:
@@ -43,6 +44,13 @@
       loop:
           - 22
           - 5601
+          - 5044
+          - 9200
+          - 9300
+          - 3389
+          - 80
+          - 443
+          - 5500:5599
 
     - name: Configure FW add UDP
       ufw:
@@ -103,11 +111,15 @@
     - name: make sure docker socket will be accessible
       ansible.builtin.shell: usermod -aG docker ubuntu
 
+    - name: set permissions in docker-compose calling script
+      ansible.builtin.shell: chmod 775 ./run_docker_compose.sh
+
+    - name: set permissions in pan-elk setup scripts
+      ansible.builtin.shell: chmod -R 775 ./elk/kibana/pan-elk/
 
     - name: Prepare the node and run the docker-compose up against previously provisioned dockerfile
-      ansible.builtin.shell: chmod +x ./run_docker_compose.sh && ./run_docker_compose.sh
-      args:
-        chdir: /home/ubuntu
+      ansible.builtin.shell: sudo -E -u ubuntu /home/ubuntu/run_docker_compose.sh
+
 
 #    - name: Verify the elasticstack URL is reachable
 

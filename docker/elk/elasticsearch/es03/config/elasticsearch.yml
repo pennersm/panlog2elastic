@@ -1,0 +1,30 @@
+# @Author: mpenners
+# @Date:   2022-04-27T11:24:10+02:00
+# @Filename: elasticsearch.yml
+# @Last modified by:   mpenners
+# @Last modified time: 2022-04-29T16:32:05+02:00
+#----------------------------------------------------------------------------------------
+node.name: es03
+path.data: /usr/share/elasticsearch/data
+path.logs: /usr/share/elasticsearch/logs
+path.repo: /usr/share/elasticsearch/snapshots
+bootstrap.memory_lock: true
+network.host: 0.0.0.0
+http.port: 9200
+
+discovery.seed_hosts: es01,es02
+cluster.name: pan-elastic-cluster
+cluster.initial_master_nodes: es01,es02,es03
+
+xpack.security.enabled: true
+xpack.security.http.ssl.enabled: true
+xpack.security.http.ssl.key: /usr/share/elasticsearch/config/certs/es03/es03.key
+xpack.security.http.ssl.certificate: /usr/share/elasticsearch/config/certs/es03/es03.crt
+xpack.security.http.ssl.certificate_authorities: /usr/share/elasticsearch/config/certs/ca/ca.crt
+xpack.security.http.ssl.verification_mode: certificate
+xpack.security.transport.ssl.enabled: true
+xpack.security.transport.ssl.key: /usr/share/elasticsearch/config/certs/es03/es03.key
+xpack.security.transport.ssl.certificate: /usr/share/elasticsearch/config/certs/es03/es03.crt
+xpack.security.transport.ssl.certificate_authorities: /usr/share/elasticsearch/config/certs/ca/ca.crt
+xpack.security.transport.ssl.verification_mode: certificate
+xpack.license.self_generated.type: basic

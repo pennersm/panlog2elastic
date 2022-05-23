@@ -6,9 +6,11 @@ variable "myawsconf" {
 variable "myawscreds" {
   default = "/Users/mpenners/.aws/credentials"
 }
+# profile to use inside .aws/config
 variable "myawsprof" {
   default = "pennersm"
 }
+# pub key to match the private key used for login to EC2
 variable "def_pub_key" {
   default = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDCa0hWHBLV05nDA1xPq785e4CU4d+K+Xw07SS0RhJlOKRU3OYh6PakKEJ69hehw+7D9v7agzJbKSJad9kTUkivrFypZyxeC56beWAMbT657o4xHtsuOcPxFutiteNiF2gULBGpP1ZxJHZSKUCkOZToMGX6UZS2PLmYEDo0Ek9188z8TbGplbahiRs180VSjhXvQWygPCF+iUR2o7cSXcpF56Z4DYnIwflvbGfJoL7xM62OATuLGUCefaMlU49rm40HB5IvwRcKAmk/lBcj6+uRNFz8N3vQWyYyYE8rSDqGBUPFHaEURF1vrKtQyWAwOXAZP0GmBK30wr+QM5WNeShj mpenners@M-C02W10FNHTDG"
 }
@@ -51,10 +53,12 @@ variable "bucket_name" {
 #-----------------------------------
 # settings for ansible
 # playbook that will be executed this file can be edited
+# ansible resources are managed by terraform
+# terraform runs this playbook on the EC2 after provisioning it
 variable "ansible_playbook" {
   default = "install_docker.yml"
 }
-#resource file will be managed by terraform editing useless
+#resource file will be managed by terraform manual editing useless
 variable "ansible_hosts" {
   default = "hosts"
 }
@@ -63,16 +67,19 @@ variable "ansible_privkey" {
   default = "/Users/mpenners/.aws/id_aws_elastic"
 }
 # only while the EC2 instance is active tf keeps last ansible log here
+# at destroy phse the log is removed
 variable "ansible_log" {
   default = "current_ansible.log"
 }
-# supposed to show output status to terraform tfstatfile but isnt working
+# showing output status to terraform tfstatfile
 variable "ansible_tf_statfile" {
   default = "ansible_tf_stat.json"
 }
 #-----------------------------------
 # settings for docker-compose
-# playbook that will be executed this file can be edited
+#
+# compose file that ansible will kick-off docker-compose
+# this file must be edited to define the cluster topology
 variable "docker_compose_file" {
   default = "docker-compose.yml"
 }

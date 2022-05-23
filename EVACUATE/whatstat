@@ -1,1 +1,0 @@
-double_imei=ed_df_gtpidx.es_query({"query": { "bool": { "filter": { "term": { "imsi": 525052700005181 } } } } }  )

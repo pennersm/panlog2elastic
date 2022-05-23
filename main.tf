@@ -111,12 +111,35 @@ resource "aws_security_group" "elastic_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
   ingress {
-    from_port   = 5519
-    to_port     = 5519
+    from_port   = 5500
+    to_port     = 5599
     protocol    = "udp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
+  ingress {
+    from_port   = 5500
+    to_port     = 5599
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
+    from_port   = 3389
+    to_port     = 3389
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
   egress {
     from_port   = 0
     to_port     = 0
@@ -125,6 +148,7 @@ resource "aws_security_group" "elastic_sg" {
   }
 }
 # 7. Create EC2 Instance
+#    and copy docker deploy dir into HOME
 resource "aws_instance" "elastic_inst" {
   ami                         = var.aws_ami
   instance_type               = var.aws_instype
@@ -145,6 +169,13 @@ resource "aws_instance" "elastic_inst" {
     destination = "/home/${var.ami_user}"
   }
 }
+## do also associate pub IP address
+#resource "aws_eip_association" "pan_elk_IP" {
+#  aws_instance.elastic_inst.pan_elk_IP
+#  instance_id = aws_instance.elastic_inst.id
+#  allocation_id =
+#}
+
 # 8. Create a hosts file for ansible
 # but this way doesnt scale inventory groups and is ugly - can be done better:
 # https://github.com/habakke/terraform-provider-ansible/blob/main/README.md

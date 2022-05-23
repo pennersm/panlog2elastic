@@ -1,0 +1,69 @@
+# @Author: mpenners
+# @Date:   2022-05-03T13:15:59+02:00
+# @Filename: kibana.yml
+# @Last modified by:   mpenners
+# @Last modified time: 2022-05-18T19:01:47+02:00
+
+server.name: "kibana01"
+#server.host: [ _local_, _site_]
+server.host: "0.0.0.0"
+server.publicBaseUrl: ${KIBANA_PUBURL}
+server.port: 5601
+server.shutdownTimeout: 5s
+#server.basePath: "/pan-elk"
+#server.rewriteBasePath: true
+
+#server.ssl.enabled: true
+#server.ssl.certificate:  /usr/share/kibana/config/certs/kibana01/kibana01.crt
+#server.ssl.key: /usr/share/kibana/config/certs/kibana01/kibana01.key
+#server.ssl.certificateAuthorities:  /usr/share/kibana/config/certs/ca/ca.crt
+#server.ssl.clientAuthentication: none
+
+# disable comment to loosen browser security requirements
+# server.securityResponseHeaders.strictTransportSecurity: "null"
+# server.securityResponseHeaders.disableEmbedding: false
+csp.strict: false
+
+
+# Specifies locale to be used for all localizable strings, dates and number formats.
+i18n.locale: "en"
+logging.root.level: info
+path.data: /usr/share/kibana/data
+#elasticsearch.username: kibana_system
+
+console.ui.enabled: true
+
+#TRY THIS
+#elasticsearch.ssl.verificationMode: none      ; probbaly only works with es-kibana connect and this seems not to be the problem
+elasticsearch.hosts: [ "https://es01:9200" ]
+elasticsearch.ssl.verificationMode: "certificate"
+elasticsearch.ssl.certificate: /usr/share/kibana/config/certs/kibana01/kibana01.crt
+elasticsearch.ssl.key: /usr/share/kibana/config/certs/kibana01/kibana01.key
+elasticsearch.ssl.certificateAuthorities: /usr/share/kibana/config/certs/ca/ca.crt
+
+#kibana: [ERROR][elasticsearch-service] Unable to retrieve version information from Elasticsearch nodes. connect ECONNREFUSED 192.168.144.3:9200
+#kibana: [ERROR][elasticsearch-service] Unable to retrieve version information from Elasticsearch nodes. security_exception: [security_exception] Reason: unable to authenticate user [kibana_system] for REST request [/_nodes?filter_path=nodes.*.version%2Cnodes.*.http.publish_address%2Cnodes.*.ip]
+xpack.reporting.kibanaServer.hostname: localhost
+
+
+
+#server.ssl.enabled: false
+#server.ssl.certificate: /usr/share/kibana/config/certs/kibana/kibana.crt
+#server.ssl.key: /usr/share/kibana/config/certs/kibana/kibana.key
+#xpack.monitoring.ui.container.elasticsearch.enabled: true
+#      - SERVERNAME=kibana
+#      - KIBANA_HOME="/usr/share/kibana"
+#      - ELASTICSEARCH_HOSTS=https://es01:9200
+#      - ELASTICSEARCH_USERNAME=kibana_system
+#      - ELASTICSEARCH_PASSWORD=${KIBANA_PASSWORD}
+#      - ELASTICSEARCH_SSL_CERTIFICATEAUTHORITIES=${KIBANA_HOME}/certs/ca/ca.crt
+#monitoring.ui.container.elasticsearch.enabled: true
+###-----
+#  currently running conf in EC2
+#  server.name: kibana01
+#  #server.host: [ _local_, _site_]
+#  server.host: 0.0.0.0
+#  #server.publicBaseUrl: "http://ec2-3-211-157-112.compute-1.amazonaws.com:5601"
+#  server.port: 5601
+#  server.basePath: "/pan-elk"
+#  server.rewriteBasePath: true
